@@ -1,2 +1,8 @@
 # Dots-Boxes-WhereToFindThem
 An implementation for the project of the course Machine Learning Project at KULeuven
+
+Based on the following Repositories:
+
+- [wannessm/dotsandboxes](https://github.com/wannesm/dotsandboxes)
+
+- [Alpha-Zero-General](https://github.com/wannesm/dotsandboxes)
