@@ -1,4 +1,4 @@
-# Dots-Boxes-WhereToFindThem
+# Dots & Boxes and Where To Find Them
 An implementation for the project of the course Machine Learning Project at KULeuven
 
 Based on the following Repositories:
