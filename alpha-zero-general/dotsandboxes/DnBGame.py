@@ -26,8 +26,7 @@ class DnBGame(Game):
     def getNextState(self, board, action):
         # if player takes action on board, return next (board,player)
         # action must be a valid move
-        if action == self.n*self.n:
-            return board
+
         b = Board(self.n)
         b.boxes = np.copy(board)
         move = (int(action/self.n), action%self.n)
@@ -41,11 +40,13 @@ class DnBGame(Game):
         b.boxes = np.copy(board)
         legalMoves = b.get_legal_moves()
 
-        if len(legalMoves)==0:
-            valids[-1]=1
-            return np.array(valids)
-        for x, y in legalMoves:
-            valids[self.n*x+y]=1
+        # if len(legalMoves)==0:
+        #     valids[-1]=1
+        #     return np.array(valids)
+
+        # D is for direction
+        for x, y, d in legalMoves:
+            valids[(self.n*x+y)*2 + d] = 1
         return np.array(valids)
 
     def getGameEnded(self, board, player):
