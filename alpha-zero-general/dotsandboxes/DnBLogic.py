@@ -19,10 +19,15 @@ class Board():
     def __init__(self, n, m):
         "Set up initial board configuration."
 
+        # We have a maximum board size as fixed and then we fix smaller boards at its center and pad
+        self.maxboard = 10
 
-        self.n = 12
-        self.m = 12
+        self.n = self.maxboard + 2;
+        self.m = self.maxboard + 2;
         self.legalMoves=[]
+
+        self.innerN = n
+        self.innerM = m
 
 
 
@@ -37,9 +42,10 @@ class Board():
             self.mask[i] = [0]*self.m
 
 
-        # Check for odd/even boards
-        for i in range(7 - n/2,2+n):
-            for j in range(7 - m/2, 2+m):
+        # Set up the legalMoves.
+        # Centers the Inner Dimensions in the center and pads
+        for i in range((self.n - self.innerN)/2,(self.n + self.innerN)/2):
+            for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
                 self.mask[i][j] = 1
                 # Horizontal Move
                 self.legalMoves.append((i,j-1,0))
@@ -56,7 +62,6 @@ class Board():
             self.legalMoves.append((1+n,j,1))
 
 
-        # Set up the legalMoves.
 
 
 
@@ -85,7 +90,7 @@ class Board():
         return self.legalMoves
 
 
-    def has_legal_moves(self):
+    def has_legal_moves(
         return len(self.legalMoves)>0;
 
     def get_moves_for_square(self, square):
@@ -121,14 +126,14 @@ class Board():
         """
 
         # Change board state
-        self.legalMoves[move[0]][move[1]]+=1
+        self.boxes[move[0]][move[1]]+=1
         if move[2]:
-            self.legalMoves[move[0]+1][move[1]]+=1
+            self.boxes[move[0]+1][move[1]]+=1
         else:
-            self.legalMoves[move[0]][move[1]+1]+=1
+            self.boxes[move[0]][move[1]+1]+=1
 
 
-        # Remove Move from Legal Moves
+        # Remove Move from Legal Moves O(n)
         # TOCHECK
         # Improve Implementation -> Maybe HashMap?
         self.legalMoves.remove(move)
@@ -136,44 +141,6 @@ class Board():
 
 
 
-
-    def _discover_move(self, origin, direction):
-        """ Returns the endpoint for a legal move, starting at the given origin,
-        moving by the given increment."""
-        x, y = origin
-        color = self[x][y]
-        flips = []
-
-        for x, y in Board._increment_move(origin, direction, self.n):
-            if self[x][y] == 0:
-                if flips:
-                    # print("Found", x,y)
-                    return (x, y)
-                else:
-                    return None
-            elif self[x][y] == color:
-                return None
-            elif self[x][y] == -color:
-                # print("Flip",x,y)
-                flips.append((x, y))
-
-    def _get_flips(self, origin, direction, color):
-        """ Gets the list of flips for a vertex and direction to use with the
-        execute_move function """
-        #initialize variables
-        flips = [origin]
-
-        for x, y in Board._increment_move(origin, direction, self.n):
-            #print(x,y)
-            if self[x][y] == 0:
-                return []
-            if self[x][y] == -color:
-                flips.append((x, y))
-            elif self[x][y] == color and len(flips) > 0:
-                #print(flips)
-                return flips
-
-        return []
 
     @staticmethod
     def _increment_move(move, direction, n):
