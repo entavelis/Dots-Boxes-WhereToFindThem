@@ -8,7 +8,7 @@ class RandomPlayer():
     def play(self, board):
         a = np.random.randint(self.game.getActionSize())
         valids = self.game.getValidMoves(board, 1)
-        while valids[a]!=1:
+        while valids[a] != 1:
             a = np.random.randint(self.game.getActionSize())
         return a
 
@@ -22,7 +22,7 @@ class HumanOthelloPlayer():
         valid = self.game.getValidMoves(board, 1)
         for i in range(len(valid)):
             if valid[i]:
-                print(int(i/self.game.n), int(i%self.game.n))
+                print(int(i/self.game.n), int(i % self.game.n))
         while True:
             a = input()
 

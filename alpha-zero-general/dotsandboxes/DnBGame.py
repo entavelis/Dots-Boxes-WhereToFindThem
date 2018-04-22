@@ -9,6 +9,7 @@ import numpy as np
 class DnBGame(Game):
     def __init__(self, n, m):
         self.n = n
+        self.m = m
 
     def getInitBoard(self):
         # return initial board (numpy board)
@@ -29,7 +30,15 @@ class DnBGame(Game):
 
         b = Board(self.n)
         b.boxes = np.copy(board)
-        move = (int(action/self.n), action%self.n)
+        if action < 2*self.n*self.m:
+            move = (int(action/2/self.m), action/2 % self.m, action % 2)
+        else:
+            action -= 2*self.n*self.m
+            if action < self.n:
+                move = (action, 0, 1)
+            else:
+                action -= self.m
+                move = (0, action, 0)
 
         # checks if the box is filled
         plays_again = b.execute_move(move)

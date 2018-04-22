@@ -117,18 +117,16 @@ class Board():
         color gives the color pf the piece to play (1=white,-1=black)
         """
 
-        plays_again = False
-
         # Change board state
         self.boxes[move[0]][move[1]]+=1
-        plays_again =  self.boxes[move[0]][move[1]] == 4
+        plays_again = self.boxes[move[0]][move[1]] == 4
 
         if move[2]:
-            self.boxes[move[0]+1][move[1]]+=1
-            plays_again = plays_again or self.boxes[move[0]+1][move[1]]==4
+            self.boxes[move[0]+1][move[1]] += 1
+            plays_again = plays_again or self.boxes[move[0]+1][move[1]] == 4
         else:
-            self.boxes[move[0]][move[1]+1]+=1
-            plays_again = plays_again or self.boxes[move[0]][move[1]+1]==4
+            self.boxes[move[0]][move[1]+1] += 1
+            plays_again = plays_again or self.boxes[move[0]][move[1]+1] == 4
 
 
         # Remove Move from Legal Moves O(n)

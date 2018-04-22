@@ -1,3 +1,4 @@
+
 '''
 Author: Eric P. Nichols
 Date: Feb 8, 2008.
@@ -10,13 +11,14 @@ Board data:
 Squares are stored and manipulated as (x,y) tuples.
 x is the column, y is the row.
 '''
+
 class Board():
 
     # list of all 8 directions on the board, as (x,y) offsets
     __directions = [(1,1),(1,0),(1,-1),(0,-1),(-1,-1),(-1,0),(-1,1),(0,1)]
 
     def __init__(self, n):
-        "Set up initial board configuration."
+        " Set up initial board configuration. "
 
         self.n = n
         # Create the empty board array.
@@ -27,8 +29,8 @@ class Board():
         # Set up the initial 4 pieces.
         self.pieces[int(self.n/2)-1][int(self.n/2)] = 1
         self.pieces[int(self.n/2)][int(self.n/2)-1] = 1
-        self.pieces[int(self.n/2)-1][int(self.n/2)-1] = -1;
-        self.pieces[int(self.n/2)][int(self.n/2)] = -1;
+        self.pieces[int(self.n/2)-1][int(self.n/2)-1] = -1
+        self.pieces[int(self.n/2)][int(self.n/2)] = -1
 
     # add [][] indexer syntax to the Board
     def __getitem__(self, index): 
@@ -148,7 +150,6 @@ class Board():
             elif self[x][y] == color and len(flips) > 0:
                 #print(flips)
                 return flips
-
         return []
 
     @staticmethod
