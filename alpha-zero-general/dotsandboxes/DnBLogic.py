@@ -55,19 +55,11 @@ class Board():
 
 
             # Last Horizontal
-            self.legalMoves.append((i,m+1,0))
+            self.legalMoves.append((i,(self.m - self.innerM)/2,0))
 
         # Last Verticals
-        for j in range(7 - m/2, 2+m):
-            self.legalMoves.append((1+n,j,1))
-
-
-
-
-
-
-
-
+        for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
+            self.legalMoves.append(((self.n + self.innerN)/2,j,1))
 
 
     # add [][] indexer syntax to the Board
@@ -90,14 +82,13 @@ class Board():
         return self.legalMoves
 
 
-    def has_legal_moves(
+    def has_legal_moves(self):
         return len(self.legalMoves)>0;
 
     def get_moves_for_square(self, square):
         """Returns all the legal moves that use the given square as a base.
         That is, if the given square is (3,4) and it contains a black piece,
-        and (3,5) and (3,6) contain white pieces, and (3,7) is empty, one
-        of the returned moves is (3,7) because everything from there to (3,4)
+        and (3,5) and (3,6) contain white pieces, and (3,7) is empty, one of the returned moves is (3,7) because everything from there to (3,4)
         is flipped.
         """
         (x,y) = square
@@ -120,23 +111,37 @@ class Board():
         # return the generated move list
         return moves
 
+
     def execute_move(self, move):
         """Perform the given move on the board; flips pieces as necessary.
         color gives the color pf the piece to play (1=white,-1=black)
         """
 
+        plays_again = False
+
         # Change board state
         self.boxes[move[0]][move[1]]+=1
+        plays_again =  self.boxes[move[0]][move[1]] == 4
+
         if move[2]:
             self.boxes[move[0]+1][move[1]]+=1
+            plays_again = plays_again or self.boxes[move[0]+1][move[1]]==4
         else:
             self.boxes[move[0]][move[1]+1]+=1
+            plays_again = plays_again or self.boxes[move[0]][move[1]+1]==4
 
 
         # Remove Move from Legal Moves O(n)
         # TOCHECK
         # Improve Implementation -> Maybe HashMap?
         self.legalMoves.remove(move)
+
+        return plays_again
+
+
+
+
+
 
 
 
