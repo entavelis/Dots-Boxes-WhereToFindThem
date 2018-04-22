@@ -23,15 +23,18 @@ class DnBGame(Game):
         # return number of actions
         return 2*self.n*self.m + self.m + self.n
 
-    def getNextState(self, board, action):
+    def getNextState(self, board, action, player):
         # if player takes action on board, return next (board,player)
         # action must be a valid move
 
         b = Board(self.n)
         b.boxes = np.copy(board)
         move = (int(action/self.n), action%self.n)
-        b.execute_move(move)
-        return b.boxes
+
+        # checks if the box is filled
+        plays_again = b.execute_move(move)
+
+        return b.boxes, (player if plays_again else -player)
 
     def getValidMoves(self, board):
         # return a fixed size binary vector
