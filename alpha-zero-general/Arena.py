@@ -54,7 +54,7 @@ class Arena():
                 print(action)
                 assert valids[action] >0
 
-            curPlayer = self.game.getNextState(board, curPlayer, action)
+            curPlayer = self.game.getNextState(curPlayer, action)
 
         if verbose:
             assert(self.display)

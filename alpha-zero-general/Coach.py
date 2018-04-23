@@ -45,19 +45,19 @@ class Coach():
 
         while True:
             episodeStep += 1
-            canonicalBoard = self.game.getCanonicalForm(self.curPlayer)
+            canonicalBoard = self.game.getCanonicalForm()
             temp = int(episodeStep < self.args.tempThreshold)
 
             pi = self.mcts.getActionProb(canonicalBoard, temp=temp)
-            sym = self.game.getSymmetries(canonicalBoard, pi)
+            sym = self.game.getSymmetries(pi)
             for b,p in sym:
                 trainExamples.append([b, self.curPlayer, p, None])
 
             # Random Choice Based on the pi array as weights
             action = np.random.choice(len(pi), p=pi)
-            board, self.curPlayer = self.game.getNextState(board, self.curPlayer, action)
+            self.curPlayer = self.game.getNextState(self.curPlayer, action)
 
-            r = self.game.getGameEnded(board, self.curPlayer)
+            r = self.game.getGameEnded()
 
             if r!=0:
                 return [(x[0],x[2],r*((-1)**(x[1]!=self.curPlayer))) for x in trainExamples]

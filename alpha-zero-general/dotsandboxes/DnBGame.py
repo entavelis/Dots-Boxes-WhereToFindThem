@@ -126,7 +126,7 @@ class DnBGame(Game):
         # we put some extra invalid actions in
         return 2*(self.n)*(self.m)
 
-    def getNextState(self, action, player):
+    def getNextState(self, player, action):
         # if player takes action on board, return next (board,player)
         # action must be a valid move
 
