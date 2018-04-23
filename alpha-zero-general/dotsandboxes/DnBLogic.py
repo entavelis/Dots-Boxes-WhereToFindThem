@@ -1,4 +1,6 @@
 '''
+Not used anymore
+
 Author: Evan Ntavelis (Based on work by Eric P. Nichols)
 Date: Feb 8, 2008.
 Board class.
@@ -12,15 +14,12 @@ x is the column, y is the row.
 '''
 class Board():
 
-    # list of all 8 directions on the board, as (x,y) offsets
-    __directions = [(1,1),(1,0),(1,-1),(0,-1),(-1,-1),(-1,0),(-1,1),(0,1)]
 
-
-    def __init__(self, n, m):
+    def __init__(self, n, m, maxboard = 10):
         "Set up initial board configuration."
 
         # We have a maximum board size as fixed and then we fix smaller boards at its center and pad
-        self.maxboard = 10
+        self.maxboard = maxboard
 
         self.n = self.maxboard + 2;
         self.m = self.maxboard + 2;
@@ -29,6 +28,7 @@ class Board():
         self.innerN = n
         self.innerM = m
 
+        self.score = 0
 
 
         # Create the empty board array.
@@ -48,7 +48,7 @@ class Board():
             for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
                 self.mask[i][j] = 1
                 # Horizontal Move
-                self.legalMoves.append((i,j-1,0))
+                self.addMove(i,j-1,0)
 
                 # Vertical Move
                 self.legalMoves.append((i-1,j,1))
@@ -66,17 +66,16 @@ class Board():
     def __getitem__(self, index): 
         return self.boxes[index]
 
-    def countDiff(self, color):
-        """Counts the # pieces of the given color
-        (1 for white, -1 for black, 0 for empty spaces)"""
-        count = 0
-        for y in range(self.n):
-            for x in range(self.n):
-                if self[x][y]==color:
-                    count += 1
-                if self[x][y]==-color:
-                    count -= 1
-        return count
+    def add_legal_move(self, x, y, d):
+        self.legalMoves[(self.innerN*x+y)*2 + d] = (x,y,d)
+
+    def pop_legal_move(self, move):
+        x = move[0]
+        y = move[1]
+        d = move[2]
+
+        return self.legalMoves.pop((self.innerN*x+y)*2 + d, None)
+
 
     def get_legal_moves(self):
         return self.legalMoves
@@ -85,54 +84,34 @@ class Board():
     def has_legal_moves(self):
         return len(self.legalMoves)>0;
 
-    def get_moves_for_square(self, square):
-        """Returns all the legal moves that use the given square as a base.
-        That is, if the given square is (3,4) and it contains a black piece,
-        and (3,5) and (3,6) contain white pieces, and (3,7) is empty, one of the returned moves is (3,7) because everything from there to (3,4)
-        is flipped.
-        """
-        (x,y) = square
-
-        # determine the color of the piece.
-        color = self[x][y]
-
-        # skip empty source squares.
-        if color==0:
-            return None
-
-        # search all possible directions.
-        moves = []
-        for direction in self.__directions:
-            move = self._discover_move(square, direction)
-            if move:
-                # print(square,move,direction)
-                moves.append(move)
-
-        # return the generated move list
-        return moves
 
 
-    def execute_move(self, move):
+    def execute_move(self, move, player):
         """Perform the given move on the board; flips pieces as necessary.
         color gives the color pf the piece to play (1=white,-1=black)
         """
 
+        # Count to see if we have any boxes filled this game
+        plays_again = 0
+
         # Change board state
         self.boxes[move[0]][move[1]]+=1
-        plays_again = self.boxes[move[0]][move[1]] == 4
+        plays_again += self.boxes[move[0]][move[1]] == 4
 
         if move[2]:
             self.boxes[move[0]+1][move[1]] += 1
-            plays_again = plays_again or self.boxes[move[0]+1][move[1]] == 4
+            plays_again += self.boxes[move[0]+1][move[1]] == 4
         else:
             self.boxes[move[0]][move[1]+1] += 1
-            plays_again = plays_again or self.boxes[move[0]][move[1]+1] == 4
+            plays_again += self.boxes[move[0]][move[1]+1] == 4
 
 
         # Remove Move from Legal Moves O(n)
         # TOCHECK
         # Improve Implementation -> Maybe HashMap?
-        self.legalMoves.remove(move)
+        self.remove_lega_move(move)
+
+        self.score += player * plays_again
 
         return plays_again
 
@@ -141,19 +120,4 @@ class Board():
 
 
 
-
-
-
-
-    @staticmethod
-    def _increment_move(move, direction, n):
-        # print(move)
-        """ Generator expression for incrementing moves """
-        move = list(map(sum, zip(move, direction)))
-        #move = (move[0]+direction[0], move[1]+direction[1])
-        while all(map(lambda x: 0 <= x < n, move)): 
-        #while 0<=move[0] and move[0]<n and 0<=move[1] and move[1]<n:
-            yield move
-            move=list(map(sum,zip(move,direction)))
-            #move = (move[0]+direction[0],move[1]+direction[1])
 

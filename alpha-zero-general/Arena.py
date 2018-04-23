@@ -15,7 +15,7 @@ class Arena():
                      display in othello/OthelloGame). Is necessary for verbose
                      mode.
 
-        see othello/OthelloPlayers.py for an example. See pit.py for pitting
+        see othello/DnBPlayers.py for an example. See pit.py for pitting
         human players/other baselines with each other.
         """
         self.player1 = player1
@@ -35,27 +35,33 @@ class Arena():
         """
         players = [self.player2, None, self.player1]
         curPlayer = 1
-        board = self.game.getInitBoard()
+        self.game.reset_game()
+
         it = 0
-        while self.game.getGameEnded(board, curPlayer)==0:
+        while self.game.getGameEnded()==0:
             it+=1
             if verbose:
                 assert(self.display)
                 print("Turn ", str(it), "Player ", str(curPlayer))
                 self.display(board)
-            action = players[curPlayer+1](self.game.getCanonicalForm(board, curPlayer))
 
-            valids = self.game.getValidMoves(self.game.getCanonicalForm(board, curPlayer),1)
+            # CHECK: change this to adjust nnet input?
+            action = players[curPlayer+1](self.game.getCanonicalForm())
+
+            valids = self.game.getValidMoves()
 
             if valids[action]==0:
                 print(action)
                 assert valids[action] >0
-            board, curPlayer = self.game.getNextState(board, curPlayer, action)
+
+            curPlayer = self.game.getNextState(board, curPlayer, action)
+
         if verbose:
             assert(self.display)
             print("Game over: Turn ", str(it), "Result ", str(self.game.getGameEnded(board, 1)))
             self.display(board)
-        return self.game.getGameEnded(board, 1)
+
+        return self.game.getGameEnded()
 
     def playGames(self, num, verbose=False):
         """
