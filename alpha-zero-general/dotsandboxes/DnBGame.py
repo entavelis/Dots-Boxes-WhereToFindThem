@@ -169,7 +169,7 @@ class DnBGame(Game):
 
     def getSymmetries(self,  pi):
 
-        board = copy(self.boxes)
+        board = np.copy(self.boxes)
         # mirror, rotational
         assert(len(pi) == 2*self.n*self.m)  # 1 for pass
         pi_board = np.reshape(pi[:-1], (self.m, self.n, 2)) # Check this: We have 2 moves for each box -> how to?
@@ -187,7 +187,8 @@ class DnBGame(Game):
 
     def stringRepresentation(self):
         # 8x8 numpy array (canonical board)
-        return boxes.tostring()
+        return self.boxes.tostring()
+
 
 def display(board):
     n = board.shape[0]
@@ -200,8 +201,8 @@ def display(board):
         print(y, "|",end="")    # print the row #
         for x in range(n):
             piece = board[y][x]    # get the piece to print
-            if piece == -1: print("b ",end="")
-            elif piece == 1: print("W ",end="")
+            if piece == 4: print("X ",end="")
+            elif piece < 4: print(piece+ " ",end="")
             else:
                 if x==n:
                     print("-",end="")

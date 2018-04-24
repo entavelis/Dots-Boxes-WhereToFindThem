@@ -39,7 +39,7 @@ class Coach():
                            the player eventually won the game, else -1.
         """
         trainExamples = []
-        board = self.game.getInitBoard()
+        board = self.game.reset_game()
         self.curPlayer = 1
         episodeStep = 0
 

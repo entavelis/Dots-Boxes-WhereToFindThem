@@ -43,9 +43,10 @@ class Arena():
             if verbose:
                 assert(self.display)
                 print("Turn ", str(it), "Player ", str(curPlayer))
-                self.display(board)
+                self.display(self.game.getCanonicalForm)
 
             # CHECK: change this to adjust nnet input?
+            # +1 is to get -1 to 0 and 1 to 2 for indices
             action = players[curPlayer+1](self.game.getCanonicalForm())
 
             valids = self.game.getValidMoves()

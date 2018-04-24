@@ -1,6 +1,7 @@
-from Coach import Coach
-from dotsandboxes.DnBGame import DnBGame as Game
-from dotsandboxes.pytorch.NNet import NNetWrapper as nn
+from .Coach import Coach
+from .dotsandboxes.DnBGame import DnBGame as Game
+from .dotsandboxes.pytorch.NNet import NNetWrapper as nn
+from
 # from othello.keras.NNet import NNetWrapper as nn
 from utils import *
 
@@ -21,13 +22,10 @@ args = dotdict({
 
     # OUR PARAMETERS
     'sequential_training': True, #Starting from smaller boards and going upwards
-    'max_board': 10;
+    'max_board': 10
 })
 
 if __name__=="__main__":
-
-    if args.load_model:
-        nnet.load_checkpoint(args.load_folder_file[0], args.load_folder_file[1])
 
     flag=False # Initial load
 
