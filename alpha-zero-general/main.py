@@ -27,25 +27,37 @@ args = dotdict({
 
 if __name__=="__main__":
 
-    flag=False # Initial load
+    g = Game(5,5)
+    nnet = nn(g)
 
+    if args.load_model:
+        nnet.load_checkpoint(args.load_folder_file[0], args.load_folder_file[1])
 
-    # Change so we train in a seq manner
-    for n in range(2,args.max_board+1):
-        for m in range(2,i+1):
-            print("Training on boards " + n + "x" + m + "...\n\n")
-            g = Game(n,m, args.max_board)
-            nnet = nn(g)
+    c = Coach(g, nnet, args)
+    if args.load_model:
+        print("Load trainExamples from file")
+        c.loadTrainExamples()
+    c.learn()
 
-            args.numEps= n*m
-
-            if args.load_model:
-              nnet.load_checkpoint(args.load_folder_file[0], args.load_folder_file[1])
-
-            c = Coach(g, nnet, args)
-            if flag or args.load_model:
-                print("Load trainExamples from file")
-                c.loadTrainExamples()
-            c.learn()
-
-            flag=True # From now on we read the prev level
+    # flag=False # Initial load
+    #
+    #
+    # # Change so we train in a seq manner
+    # for n in range(2,args.max_board+1):
+    #     for m in range(2,i+1):
+    #         print("Training on boards " + n + "x" + m + "...\n\n")
+    #         g = Game(n,m, args.max_board)
+    #         nnet = nn(g)
+    #
+    #         args.numEps= n*m
+    #
+    #         if args.load_model:
+    #           nnet.load_checkpoint(args.load_folder_file[0], args.load_folder_file[1])
+    #
+    #         c = Coach(g, nnet, args)
+    #         if flag or args.load_model:
+    #             print("Load trainExamples from file")
+    #             c.loadTrainExamples()
+    #         c.learn()
+    #
+    #         flag=True # From now on we read the prev level
