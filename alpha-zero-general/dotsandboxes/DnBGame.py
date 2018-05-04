@@ -1,20 +1,18 @@
 from __future__ import print_function
 import sys
 sys.path.append('..')
-from Game import Game
-from .DnBLogic import Board
 import numpy as np
 
 
-class DnBGame(Game):
+class DnBGame():
     def __init__(self, n, m, maxboard = 10):
         "Set up initial board configuration."
 
         # We have a maximum board size as fixed and then we fix smaller boards at its center and pad
-        self.maxboard = maxboard
+        # self.maxboard = maxboard
 
-        self.n = self.maxboard + 2;
-        self.m = self.maxboard + 2;
+        self.n = n + 2;
+        self.m = m + 2;
         self.legalMoves=[]
 
         self.innerN = n
@@ -134,7 +132,7 @@ class DnBGame(Game):
         move = self.pop_legal_move(action)
 
         # checks if the box is filled
-        plays_again = b.execute_move(move)
+        plays_again = self.execute_move(move)
 
         return (player if plays_again else -player)
 
@@ -155,11 +153,11 @@ class DnBGame(Game):
             return 0
 
         # Checks for draw
-        if not b.score:
+        if not self.score:
             # draw has a very little value
             return 1e-4
 
-        return np.sign(b.score)
+        return np.sign(self.score)
 
 
     # Maybe we should set this to turn boards so n>m
@@ -172,22 +170,110 @@ class DnBGame(Game):
         board = np.copy(self.boxes)
         # mirror, rotational
         assert(len(pi) == 2*self.n*self.m)  # 1 for pass
-        pi_board = np.reshape(pi[:-1], (self.m, self.n, 2)) # Check this: We have 2 moves for each box -> how to?
+
+        pi_down=[]
+        pi_left=[]
+        for i in range(0,len(pi),2):
+            pi_down.append(pi[i])
+            pi_left.append(pi[i+1])
+
+        # pi_board = np.reshape(pi[:-1], (self.m, self.n, 2)) # Check this: We have 2 moves for each box -> how to?
+        pi_down_board = np.reshape(pi, (self.n, self.m))
+        pi_left_board = np.reshape(pi, (self.n, self.m))
+
         l = []
 
-        for i in range(1, 5):
-            for j in [True, False]:
-                newB = np.rot90(board, i)
-                newPi = np.rot90(pi_board, i)
-                if j:
-                    newB = np.fliplr(newB)
-                    newPi = np.fliplr(newPi)
-                l += [(newB, list(newPi.ravel()) + [pi[-1]])]
+        # check if we want to store 4 or 8 symmetrical boards
+        square = (self.n == self.m)
+
+        # Original version
+        temp_board = board
+        temp_pi_down = pi_down_board
+        temp_pi_left = pi_left_board
+        l.append((board, list(pi)))
+
+        # Flipped
+        l.append(temp_board, _merge(temp_pi_left, temp_pi_down))
+
+        for i in range(1,4):
+            # 90*i degrees
+            temp_board, temp_pi_down, temp_pi_left = _get_rotated(temp_board, temp_pi_down, temp_pi_left)
+
+            if square or i==2:
+                l.append(temp_board,_merge(temp_pi_down,temp_pi_left))
+
+                # flipped
+                b, pid, pil = _get_flipped = _get_flipped(temp_board, temp_pi_down, temp_pi_left)
+
+                l.append(b, _merge(pid,pil))
+
+        #
+        #
+        # for i in range(1, 5):
+        #     for j in [True, False]:
+        #         newB = np.rot90(board, i)
+        #         newPi = np.rot90(pi_board, i)
+        #         if j:
+        #             newB = np.fliplr(newB)
+        #             newPi = np.fliplr(newPi)
+        #         l += [(newB, list(newPi.ravel()) )]
         return l
 
     def stringRepresentation(self):
         # 8x8 numpy array (canonical board)
         return self.boxes.tostring()
+
+def _get_rotated(board, down, left):
+    '''
+    Rotated the Board and Pi boards by 90 according to conventions and returns the right result
+    :param board:
+    :param down:
+    :param left:
+    :return:
+    '''
+    temp_board = np.rot90(board)
+    temp_down = np.roll(np.rot90(left),-1,0)
+    temp_left = np.rot90(down)
+
+
+def _get_flipped(board, down, left):
+    '''
+    Flips Board and Pi boards according to conventions and returns the right result
+    :param board:
+    :param down:
+    :param left:
+    :return:
+    '''
+    temp_board = np.fliplr(board)
+    temp_down = np.fliplr(down)
+    temp_left = _pi_fliplr(left)
+    return board, temp_down, temp_left
+
+
+def _pi_fliplr(board):
+    '''
+    Flips the pi boards left to right according to our conventions
+    :return: the flipped board
+    '''
+    return np.roll(np.fliplr(board),-1,1)
+
+def _pi_flipud(board):
+    '''
+    Flips the pi boards up to down according to our conventions
+    :return: the flipped board
+    '''
+    return np.roll(np.flipup(board),-1,0)
+
+def _merge(x,y):
+    '''
+    Merges the two pi boards into a list
+    :param x: the downward pis
+    :param y: the leftwards pis
+    :return: the list of pis
+    '''
+    result = []
+    for x_i,y_i in zip(x.ravel(),y.ravel()):
+        result += [x_i,y_i]
 
 
 def display(board):
