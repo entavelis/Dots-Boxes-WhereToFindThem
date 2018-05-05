@@ -122,7 +122,7 @@ class DnBGame():
             print(len(self.legalMoves))
             print("\nBoard State\n")
             print(self.boxes)
-            return None
+            return "123"
 
 
         # Remove Move from Legal Moves O(1)
