@@ -215,7 +215,7 @@ class DnBGame():
                 l.append((temp_board,_merge(temp_pi_down,temp_pi_left)))
 
                 # flipped
-                b, pid, pil = _get_flipped = _get_flipped(temp_board, temp_pi_down, temp_pi_left)
+                b, pid, pil = _get_flipped(temp_board, temp_pi_down, temp_pi_left)
 
                 l.append((b, _merge(pid,pil)))
 
