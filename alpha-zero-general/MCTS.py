@@ -50,6 +50,7 @@ class MCTS():
         return probs
 
 
+    # Changed from recursive to iteratial
     def search(self, game):
         """
         This function performs one iteration of MCTS. It is recursively called
@@ -57,9 +58,9 @@ class MCTS():
         has the maximum upper confidence bound as in the paper.
 
         Once a leaf node is found, the neural network is called to return an
-        initial policy P and a value v for the state. This value is propogated
+        initial policy P and a value v for the state. This value is propagated
         up the search path. In case the leaf node is a terminal state, the
-        outcome is propogated up the search path. The values of Ns, Nsa, Qsa are
+        outcome is propagated up the search path. The values of Ns, Nsa, Qsa are
         updated.
 
         NOTE: the return values are the negative of the value of the current
@@ -70,8 +71,9 @@ class MCTS():
             v: the negative of the value of the current canonicalBoard
         """
 
-        s = game.stringRepresentation()
+        results=[]
 
+        s = game.stringRepresentation()
         if s not in self.Es:
             self.Es[s] = game.getGameEnded()
         if self.Es[s]!=0:
@@ -119,7 +121,11 @@ class MCTS():
         a = best_act
         next_player = game.getNextState(1, a)
 
+        self.Ns[s] += 1
+
         v = self.search(game)
+
+        results.append((s,a,v))
 
         if (s,a) in self.Qsa:
             self.Qsa[(s,a)] = (self.Nsa[(s,a)]*self.Qsa[(s,a)] + v)/(self.Nsa[(s,a)]+1)
@@ -129,5 +135,4 @@ class MCTS():
             self.Qsa[(s,a)] = v
             self.Nsa[(s,a)] = 1
 
-        self.Ns[s] += 1
         return -v

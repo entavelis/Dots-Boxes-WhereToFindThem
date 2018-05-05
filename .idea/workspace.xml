@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85233d1d-615e-4409-a3b9-2c5e5650b6a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" afterPath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/MCTS.py" afterPath="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/main.py" afterPath="$PROJECT_DIR$/alpha-zero-general/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,17 +17,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+            <state relative-caret-position="631">
+              <caret line="40" column="15" lean-forward="false" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DnBGame.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DnBGame.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
@@ -63,8 +64,8 @@
       <file leaf-file-name="MCTS.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-986">
-              <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+            <state relative-caret-position="365">
+              <caret line="120" column="18" lean-forward="false" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -157,12 +158,12 @@
         <option value="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/cifar.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/Coach.py" />
-        <option value="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/Arena.py" />
-        <option value="$PROJECT_DIR$/alpha-zero-general/main.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/othello/pytorch/NNet.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
+        <option value="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
+        <option value="$PROJECT_DIR$/alpha-zero-general/main.py" />
       </list>
     </option>
   </component>
@@ -836,16 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-986">
-          <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alpha-zero-general/Coach.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -853,14 +844,6 @@
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -873,6 +856,24 @@
             <element signature="e#2687#2717#0" expanded="false" />
             <element signature="e#4176#4284#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="120" column="18" lean-forward="false" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="40" column="15" lean-forward="false" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

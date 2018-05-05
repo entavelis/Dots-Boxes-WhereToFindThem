@@ -23,7 +23,7 @@ args = dotdict({
     'updateThreshold': 0.6,
     'maxlenOfQueue': 200000,
     'numMCTSSims': 25,
-    'arenaCompare': 40,
+    'arenaCompare': 3, # Changed from 40
     'cpuct': 1,
 
     'checkpoint': './temp/',
@@ -38,7 +38,7 @@ args = dotdict({
 
 if __name__=="__main__":
 
-    g = Game(5,5)
+    g = Game(3,3)
     nnet = nn(g)
 
     if args.load_model:
