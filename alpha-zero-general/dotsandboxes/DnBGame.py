@@ -102,6 +102,10 @@ class DnBGame():
         # Count to see if we have any boxes filled this game
         plays_again = 0
 
+        print("Executes move")
+        print(move[0])
+        print(move[1])
+        print(move[2])
         # Change board state
         self.boxes[move[0]][move[1]]+=1
         plays_again += self.boxes[move[0]][move[1]] == 4
