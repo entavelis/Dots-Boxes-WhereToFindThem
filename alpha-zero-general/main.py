@@ -17,13 +17,13 @@ except Exception:
 
 
 args = dotdict({
-    'numIters': 200, # Changed from 1000
-    'numEps': 20, # Changed from 100
+    'numIters': 20, # Changed from 1000
+    'numEps': 5, # Changed from 100
     'tempThreshold': 15,
     'updateThreshold': 0.6,
     'maxlenOfQueue': 200000,
     'numMCTSSims': 25,
-    'arenaCompare': 3, # Changed from 40
+    'arenaCompare': 10, # Changed from 40
     'cpuct': 1,
 
     'checkpoint': './temp/',
