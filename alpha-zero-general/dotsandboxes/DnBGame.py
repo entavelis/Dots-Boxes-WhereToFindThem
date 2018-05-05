@@ -229,7 +229,7 @@ class DnBGame():
         #             newB = np.fliplr(newB)
         #             newPi = np.fliplr(newPi)
         #         l += [(newB, list(newPi.ravel()) )]
-        print(l)
+        # print(l)
         return l
 
     def stringRepresentation(self):
