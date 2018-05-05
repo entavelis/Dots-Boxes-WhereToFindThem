@@ -13,7 +13,7 @@ class DnBGame():
 
         self.n = n + 2;
         self.m = m + 2;
-        self.legalMoves=[]
+        # self.legalMoves=[]
 
         self.innerN = n
         self.innerM = m
@@ -28,7 +28,7 @@ class DnBGame():
         self.boxes = [None]*self.n
 
         # Create the empty board array.
-        self.mask = [None]*self.n
+        # self.mask = [None]*self.n
 
         for i in range(self.n):
             self.boxes[i] = [0]*self.m
@@ -38,9 +38,11 @@ class DnBGame():
 
         # Set up the legalMoves.
         # Centers the Inner Dimensions in the center and pads
-        for i in range((self.n - self.innerN)/2,(self.n + self.innerN)/2):
-            for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
-                self.mask[i][j] = 1
+        # for i in range((self.n - self.innerN)/2,(self.n + self.innerN)/2):
+        for i in range(1,self.n):
+        #     for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
+            for j in range(1,self.m):
+                # self.mask[i][j] = 1
                 # Horizontal Move
                 self.add_legal_move(i,j-1,0)
 
@@ -49,11 +51,14 @@ class DnBGame():
 
 
             # Last Horizontal
-            self.add_legal_move(i,(self.m - self.innerM)/2,0)
+            # self.add_legal_move(i,(self.m - self.innerM)/2,0)
+            self.add_legal_move(i,self.m - 1,0)
 
         # Last Verticals
-        for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
-            self.add_legal_move((self.n + self.innerN)/2,j,1)
+        # for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
+        for j in range(1,self.m):
+            # self.add_legal_move((self.n + self.innerN)/2,j,1)
+            self.add_legal_move(self.n-1,j,1)
 
         # TOCHECK turn to np.arrays
         self.boxes = np.array(self.boxes)
@@ -64,7 +69,9 @@ class DnBGame():
         return self.boxes[index]
 
     def add_legal_move(self, x, y, d):
-        self.legalMoves[(self.innerN*x+y)*2 + d] = (x,y,d)
+        # Check legal moves sizes
+        # self.legalMoves[(self.innerN*x+y)*2 + d] = (x,y,d)
+        self.legalMoves[(self.n*x+y)*2 + d] = (x,y,d)
 
     def pop_legal_move(self, move):
         x = move[0]
