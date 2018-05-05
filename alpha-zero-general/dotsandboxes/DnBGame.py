@@ -163,6 +163,7 @@ class DnBGame():
             print(len(self.legalMoves))
             print("\nBoard State\n")
             print(self.boxes)
+            self.print_legal_moves()
             raise ValueError
 
 
