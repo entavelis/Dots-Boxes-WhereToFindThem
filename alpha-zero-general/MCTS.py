@@ -92,7 +92,7 @@ class MCTS():
             # self.Ps[s] = self.Ps[s]*valids
             temp = np.zeros(game.getActionSize())
             for v in valids:
-                temp[v] = self.Ps[s]
+                temp[v] = self.Ps[s][v]
             self.Ps[s] = temp
 
             sum_Ps_s = np.sum(self.Ps[s])
