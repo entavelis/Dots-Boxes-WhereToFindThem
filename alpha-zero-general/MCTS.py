@@ -77,7 +77,7 @@ class MCTS():
 
         if s not in self.Ps:
             # leaf node
-            self.Ps[s], v = self.nnet.predict(game.getCanonicalBoard)
+            self.Ps[s], v = self.nnet.predict(game.getCanonicalForm())
             valids = game.getValidMoves()
             self.Ps[s] = self.Ps[s]*valids      # masking invalid moves
             sum_Ps_s = np.sum(self.Ps[s])
