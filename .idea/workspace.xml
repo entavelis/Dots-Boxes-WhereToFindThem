@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85233d1d-615e-4409-a3b9-2c5e5650b6a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" afterPath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/Arena.py" afterPath="$PROJECT_DIR$/alpha-zero-general/Arena.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arena.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Arena.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/Arena.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+            <state relative-caret-position="272">
+              <caret line="73" column="7" lean-forward="false" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -54,7 +54,7 @@
       <file leaf-file-name="MCTS.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
+            <state relative-caret-position="2006">
               <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NNet.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NNet.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -157,12 +157,12 @@
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBLogic.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/cifar.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py" />
-        <option value="$PROJECT_DIR$/alpha-zero-general/Arena.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/Coach.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/main.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" />
+        <option value="$PROJECT_DIR$/alpha-zero-general/Arena.py" />
       </list>
     </option>
   </component>
@@ -789,26 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/Arena.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
@@ -872,9 +852,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2006">
+          <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/Arena.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="73" column="7" lean-forward="false" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

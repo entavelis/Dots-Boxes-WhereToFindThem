@@ -1,6 +1,6 @@
 import numpy as np
 
-from progressbar import ETA, Bar, Percentage, ProgressBar
+from progressbar import ETA, Bar, Percentage, ProgressBar, AverageMeter
 import time
 
 class Arena():
@@ -70,7 +70,7 @@ class Arena():
             twoWon: games won by player2
             draws:  games won by nobody
         """
-        eps_time = AverageMeter()
+        # eps_time = AverageMeter()
         bar = Bar('Arena.playGames', max=num)
         end = time.time()
         eps = 0
