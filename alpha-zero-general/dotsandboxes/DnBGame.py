@@ -142,6 +142,7 @@ class DnBGame():
         # Gets and removes the action out of the legal moves
 
         move = self.pop_legal_move(action)
+        print(move)
 
         # checks if the box is filled
         plays_again = self.execute_move(move, player)
