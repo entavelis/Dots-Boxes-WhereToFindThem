@@ -205,7 +205,7 @@ class DnBGame():
         l.append((board, list(pi)))
 
         # Flipped
-        l.append(temp_board, _merge(temp_pi_left, temp_pi_down))
+        l.append((temp_board, _merge(temp_pi_left, temp_pi_down)))
 
         for i in range(1,4):
             # 90*i degrees
