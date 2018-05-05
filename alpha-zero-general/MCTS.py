@@ -88,7 +88,13 @@ class MCTS():
             # Improve Performance
             valids = game.getLegalKeys()
 
-            self.Ps[s] = self.Ps[s]*valids      # masking invalid moves
+            # masking invalid moves
+            # self.Ps[s] = self.Ps[s]*valids
+            temp = [0]*game.getActionSize()
+            for v in valids:
+                temp[v] = self.Ps[s]
+            self.Ps[s] = temp
+
             sum_Ps_s = np.sum(self.Ps[s])
             if sum_Ps_s > 0:
                 self.Ps[s] /= sum_Ps_s    # renormalize
