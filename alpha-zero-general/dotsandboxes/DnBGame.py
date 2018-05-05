@@ -155,7 +155,7 @@ class DnBGame():
 
         self.moves_played.append(action)
         if move==None:
-            print("\nMove Tried]\n")
+            print("\nMove Tried\n")
 
             print(action)
             print(self.moves_played)

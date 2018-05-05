@@ -72,7 +72,7 @@ class MCTS():
             v: the negative of the value of the current canonicalBoard
         """
 
-        results=[]
+        # results=[]
 
         s = game.stringRepresentation()
         if s not in self.Es:
@@ -118,7 +118,7 @@ class MCTS():
         # pick the action with the highest upper confidence bound
         # for a in range(game.getActionSize()):
         #     if valids[a]:
-        print(valids)
+        print(len(valids))
         for a in valids:
                 if (s,a) in self.Qsa:
                     u = self.Qsa[(s,a)] + self.args.cpuct*self.Ps[s][a]*math.sqrt(self.Ns[s])/(1+self.Nsa[(s,a)])
@@ -137,7 +137,7 @@ class MCTS():
 
         v = self.search(game)
 
-        results.append((s,a,v))
+        # results.append((s,a,v))
 
         if (s,a) in self.Qsa:
             self.Qsa[(s,a)] = (self.Nsa[(s,a)]*self.Qsa[(s,a)] + v)/(self.Nsa[(s,a)]+1)
