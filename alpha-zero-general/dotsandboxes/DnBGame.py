@@ -59,7 +59,7 @@ class DnBGame():
 
         # Last Verticals
         # for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
-        for j in range(1,self.m):
+        for j in range(1,self.m-1):
             # self.add_legal_move((self.n + self.innerN)/2,j,1)
             self.add_legal_move(self.n-2,j,1)
 
@@ -67,7 +67,7 @@ class DnBGame():
         self.boxes = np.array(self.boxes)
         # self.mask = np.array(self.mask)
 
-        self.print_legal_moves()
+        # self.print_legal_moves()
 
     # add [][] indexer syntax to the Board
     def __getitem__(self, index):
