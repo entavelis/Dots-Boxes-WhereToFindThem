@@ -119,7 +119,7 @@ class DnBGame():
 
 
         # Remove Move from Legal Moves O(1)
-        self.remove_legal_move(move)
+        # self.remove_legal_move(move)
 
         # Adjust Score
         self.score += player * plays_again
