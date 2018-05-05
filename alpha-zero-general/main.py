@@ -9,6 +9,7 @@ except Exception:
     from dotsandboxes.pytorch.NNet import NNetWrapper as nn
     from utils import *
 
+
 args = dotdict({
     'numIters': 500, # Changed from 1000
     'numEps': 100,
