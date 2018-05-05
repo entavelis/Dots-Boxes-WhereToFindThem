@@ -34,7 +34,7 @@ class MCTS():
 
         for i in range(self.args.numMCTSSims):
             game_instance = copy.deepcopy(self.game)
-            print(game_instance.getLegalKeys())
+            # print(game_instance.getLegalKeys())
             self.search(game_instance)
 
         s = self.game.stringRepresentation()
