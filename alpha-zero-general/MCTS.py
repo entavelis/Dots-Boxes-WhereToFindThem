@@ -90,7 +90,7 @@ class MCTS():
 
             # masking invalid moves
             # self.Ps[s] = self.Ps[s]*valids
-            temp = [0]*game.getActionSize()
+            temp = np.zeros(game.getActionSize())
             for v in valids:
                 temp[v] = self.Ps[s]
             self.Ps[s] = temp
