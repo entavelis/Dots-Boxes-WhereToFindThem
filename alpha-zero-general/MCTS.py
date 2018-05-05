@@ -83,7 +83,10 @@ class MCTS():
         if s not in self.Ps:
             # leaf node
             self.Ps[s], v = self.nnet.predict(game.getCanonicalForm())
-            valids = game.getValidMoves()
+
+            # Improve Performance
+            valids = game.getLegalKeys()
+
             self.Ps[s] = self.Ps[s]*valids      # masking invalid moves
             sum_Ps_s = np.sum(self.Ps[s])
             if sum_Ps_s > 0:
@@ -106,8 +109,9 @@ class MCTS():
         best_act = -1
 
         # pick the action with the highest upper confidence bound
-        for a in range(game.getActionSize()):
-            if valids[a]:
+        # for a in range(game.getActionSize()):
+        #     if valids[a]:
+        for a in valids:
                 if (s,a) in self.Qsa:
                     u = self.Qsa[(s,a)] + self.args.cpuct*self.Ps[s][a]*math.sqrt(self.Ns[s])/(1+self.Nsa[(s,a)])
                 else:
