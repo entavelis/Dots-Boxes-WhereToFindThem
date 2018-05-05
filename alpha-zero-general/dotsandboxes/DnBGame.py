@@ -146,6 +146,7 @@ class DnBGame():
 
         if move==None:
             print("\nMove Tried]\n")
+            print(action)
             print(move)
             print("\nMoves Left\n")
             print(len(self.legalMoves))
