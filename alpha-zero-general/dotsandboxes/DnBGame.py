@@ -34,7 +34,7 @@ class DnBGame():
             self.boxes[i] = [0]*self.m
             # self.mask[i] = [0]*self.m
 
-        # Do I even need to store the tuple or just the hash?
+        # ATTENTION: Do I even need to store the tuple or just the hash? Check Implementation as Java's BitSet or just have the
         self.legalMoves = dict()
 
         # Set up the legalMoves.
@@ -103,12 +103,6 @@ class DnBGame():
         # Count to see if we have any boxes filled this game
         plays_again = 0
 
-        print("Available Moves")
-        print(self.legalMoves)
-        print("Executes Move")
-        print(move[0])
-        print(move[1])
-        print(move[2])
         # Change board state
         self.boxes[move[0]][move[1]]+=1
         plays_again += self.boxes[move[0]][move[1]] == 4
@@ -196,8 +190,8 @@ class DnBGame():
             pi_left.append(pi[i+1])
 
         # pi_board = np.reshape(pi[:-1], (self.m, self.n, 2)) # Check this: We have 2 moves for each box -> how to?
-        pi_down_board = np.reshape(pi, (self.n, self.m))
-        pi_left_board = np.reshape(pi, (self.n, self.m))
+        pi_down_board = np.reshape(pi_down, (self.n, self.m))
+        pi_left_board = np.reshape(pi_left, (self.n, self.m))
 
         l = []
 
