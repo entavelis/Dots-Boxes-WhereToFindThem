@@ -168,9 +168,9 @@ class DnBGame():
 
 
     # Maybe we should set this to turn boards so n>m
-    def getCanonicalForm(self, board, player):
+    def getCanonicalForm(self):
         # return state if player==1, else return -state if player==-1
-        return board
+        return self.board
 
     def getSymmetries(self,  pi):
 
