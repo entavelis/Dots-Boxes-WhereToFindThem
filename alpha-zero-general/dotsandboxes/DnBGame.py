@@ -24,6 +24,8 @@ class DnBGame():
         # Reset Score to 0
         self.score = 0
 
+        self.moves_played = []
+
         # Create the empty board array.
         self.boxes = [None]*self.n
 
@@ -144,10 +146,12 @@ class DnBGame():
 
         move = self.pop_legal_move(action)
 
+        self.moves_played.append(action)
         if move==None:
             print("\nMove Tried]\n")
+
             print(action)
-            print(move)
+            print(self.moves_played)
             print("\nMoves Left\n")
             print(len(self.legalMoves))
             print("\nBoard State\n")
