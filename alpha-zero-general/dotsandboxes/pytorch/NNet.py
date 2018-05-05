@@ -74,8 +74,6 @@ class NNetWrapper(NeuralNet):
 
                 # compute output
                 out_pi, out_v = self.nnet(boards)
-
-                print(str(out_pi).encode('utf-8'))
                 l_pi = self.loss_pi(target_pis, out_pi)
 
                 l_v = self.loss_v(target_vs, out_v)
