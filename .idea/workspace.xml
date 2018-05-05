@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85233d1d-615e-4409-a3b9-2c5e5650b6a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/alpha-zero-general/Arena.py" afterPath="$PROJECT_DIR$/alpha-zero-general/Arena.py" />
       <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" afterPath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,21 +19,21 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+            <state relative-caret-position="544">
+              <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DnBGame.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DnBGame.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+            <state relative-caret-position="697">
+              <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
-                <element signature="e#2861#2891#0" expanded="false" />
+                <element signature="e#2895#2925#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -43,14 +42,14 @@
       <file leaf-file-name="tester.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="95" column="20" lean-forward="false" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+            <state relative-caret-position="59">
+              <caret line="70" column="10" lean-forward="false" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arena.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Arena.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/Arena.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -75,7 +74,7 @@
       <file leaf-file-name="Coach.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/Coach.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="-578">
               <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
@@ -158,11 +157,11 @@
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/othello/pytorch/NNet.py" />
-        <option value="$PROJECT_DIR$/alpha-zero-general/main.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/Coach.py" />
-        <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/Arena.py" />
+        <option value="$PROJECT_DIR$/alpha-zero-general/main.py" />
+        <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
       </list>
     </option>
   </component>
@@ -538,7 +537,7 @@
           <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#2861#2891#0" expanded="false" />
+            <element signature="e#2895#2925#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -821,15 +820,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/alpha-zero-general/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="544">
+          <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alpha-zero-general/Coach.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="-578">
           <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
@@ -847,30 +846,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#2861#2891#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="95" column="20" lean-forward="false" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alpha-zero-general/Arena.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="61" column="12" lean-forward="false" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="70" column="10" lean-forward="false" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#2895#2925#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -67,6 +67,8 @@ class DnBGame():
         self.boxes = np.array(self.boxes)
         # self.mask = np.array(self.mask)
 
+        self.print_legal_moves()
+
     # add [][] indexer syntax to the Board
     def __getitem__(self, index):
         return self.boxes[index]
@@ -256,6 +258,17 @@ class DnBGame():
     def stringRepresentation(self):
         # 8x8 numpy array (canonical board)
         return self.boxes.tostring()
+
+    def print_legal_moves(self):
+
+        temp = np.zeros((self.n,self.m))
+        for key,(x,y,d) in self.legalMoves:
+            if d:
+                temp[x,y] += 10
+            else:
+                temp[x,y] += 1
+
+        print(temp)
 
 def _get_rotated(board, down, left):
     '''
