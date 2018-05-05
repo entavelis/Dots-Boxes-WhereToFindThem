@@ -142,7 +142,7 @@ class DnBGame():
         move = self.pop_legal_move(action)
 
         # checks if the box is filled
-        plays_again = self.execute_move(move)
+        plays_again = self.execute_move(move, player)
 
         return (player if plays_again else -player)
 
