@@ -118,6 +118,7 @@ class MCTS():
         # pick the action with the highest upper confidence bound
         # for a in range(game.getActionSize()):
         #     if valids[a]:
+        print(valids)
         for a in valids:
                 if (s,a) in self.Qsa:
                     u = self.Qsa[(s,a)] + self.args.cpuct*self.Ps[s][a]*math.sqrt(self.Ns[s])/(1+self.Nsa[(s,a)])
