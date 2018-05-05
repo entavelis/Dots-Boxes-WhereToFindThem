@@ -32,7 +32,7 @@ class DnBGame():
 
         for i in range(self.n):
             self.boxes[i] = [0]*self.m
-            self.mask[i] = [0]*self.m
+            # self.mask[i] = [0]*self.m
 
         self.legalMoves = dict()
 
@@ -62,7 +62,7 @@ class DnBGame():
 
         # TOCHECK turn to np.arrays
         self.boxes = np.array(self.boxes)
-        self.mask = np.array(self.mask)
+        # self.mask = np.array(self.mask)
 
     # add [][] indexer syntax to the Board
     def __getitem__(self, index):
