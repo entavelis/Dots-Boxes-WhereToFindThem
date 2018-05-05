@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85233d1d-615e-4409-a3b9-2c5e5650b6a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/alpha-zero-general/MCTS.py" afterPath="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" afterPath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/main.py" afterPath="$PROJECT_DIR$/alpha-zero-general/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MCTS.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MCTS.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="461">
@@ -62,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="58" column="14" lean-forward="false" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+            <state relative-caret-position="340">
+              <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -87,8 +88,8 @@
       <file leaf-file-name="NNet.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="132" column="72" lean-forward="false" selection-start-line="132" selection-start-column="72" selection-end-line="132" selection-end-column="72" />
+            <state relative-caret-position="272">
+              <caret line="77" column="27" lean-forward="false" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -134,14 +135,14 @@
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tensorflow/OthelloNNet.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tensorflow/NNet.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBLogic.py" />
-        <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/cifar.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py" />
-        <option value="$PROJECT_DIR$/alpha-zero-general/main.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/Arena.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/Coach.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
+        <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" />
+        <option value="$PROJECT_DIR$/alpha-zero-general/main.py" />
       </list>
     </option>
   </component>
@@ -803,11 +804,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py">
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="132" column="72" lean-forward="false" selection-start-line="132" selection-start-column="72" selection-end-line="132" selection-end-column="72" />
-          <folding />
+        <state relative-caret-position="461">
+          <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -821,21 +824,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/main.py">
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="58" column="14" lean-forward="false" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+        <state relative-caret-position="272">
+          <caret line="77" column="27" lean-forward="false" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
