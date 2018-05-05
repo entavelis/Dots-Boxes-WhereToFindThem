@@ -246,6 +246,7 @@ def _get_rotated(board, down, left):
     temp_board = np.rot90(board)
     temp_down = np.roll(np.rot90(left),-1,0)
     temp_left = np.rot90(down)
+    return temp_board, temp_down, temp_left
 
 
 def _get_flipped(board, down, left):
