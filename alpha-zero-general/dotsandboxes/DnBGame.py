@@ -289,6 +289,8 @@ def _merge(x,y):
     for x_i,y_i in zip(x.ravel(),y.ravel()):
         result += [x_i,y_i]
 
+    return result
+
 
 def display(board):
     n = board.shape[0]
