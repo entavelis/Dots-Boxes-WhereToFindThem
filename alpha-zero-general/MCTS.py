@@ -115,7 +115,7 @@ class MCTS():
                     cur_best = u
                     best_act = a
 
-        print(len(game.getValidMoves()))
+        # print(len(game.getValidMoves()))
         a = best_act
         next_player = game.getNextState(1, a)
 
