@@ -46,10 +46,10 @@ class DnBGame():
         #     for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
             for j in range(1,self.m-1):
                 # self.mask[i][j] = 1
-                # Horizontal Move
+                # Horizontal (left) Move -> 0
                 self.add_legal_move(i,j-1,0)
 
-                # Vertical Move
+                # Vertical (down) Move -> 1
                 self.add_legal_move(i-1,j,1)
 
 
@@ -210,8 +210,8 @@ class DnBGame():
         pi_down=[]
         pi_left=[]
         for i in range(0,len(pi),2):
-            pi_down.append(pi[i])
-            pi_left.append(pi[i+1])
+            pi_left.append(pi[i])
+            pi_down.append(pi[i+1])
 
         # pi_board = np.reshape(pi[:-1], (self.m, self.n, 2)) # Check this: We have 2 moves for each box -> how to?
         pi_down_board = np.reshape(pi_down, (self.n, self.m))
@@ -236,7 +236,7 @@ class DnBGame():
             temp_board, temp_pi_down, temp_pi_left = _get_rotated(temp_board, temp_pi_down, temp_pi_left)
 
             if square or i==2:
-                l.append((temp_board,_merge(temp_pi_down,temp_pi_left)))
+                l.append((temp_board,_merge(temp_pi_left,temp_pi_down)))
 
                 # flipped
                 b, pid, pil = _get_flipped(temp_board, temp_pi_down, temp_pi_left)
@@ -317,8 +317,8 @@ def _pi_flipud(board):
 def _merge(x,y):
     '''
     Merges the two pi boards into a list
-    :param x: the downward pis
-    :param y: the leftwards pis
+    :param x: the leftwards pis
+    :param y: the downwards pis
     :return: the list of pis
     '''
     result = []

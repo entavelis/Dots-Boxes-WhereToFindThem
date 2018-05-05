@@ -17,9 +17,11 @@ import json
 from collections import defaultdict
 import random
 
+import np
 from alpha-zero-general.MCTS import MCTS
 from alpha-zero-general.dotsandboxes.DnBGame import DnBGame
 from alpha-zero-general.dotsandboxes.NNet import NNetWrapper as NNet
+from alpha-zero-general.utils import *
 
 
 logger = logging.getLogger(__name__)
@@ -50,18 +52,32 @@ class DotsAndBoxesAgent:
         :param timelimit: Maximum time allowed to send a next action.
         """
         self.player = {player}
+
         self.timelimit = timelimit
         self.ended = False
+
         self.nb_rows = nb_rows
         self.nb_cols = nb_cols
-        rows = []
-        for ri in range(nb_rows + 1):
-            columns = []
-            for ci in range(nb_cols + 1):
-                columns.append({"v": 0, "h": 0})
-            rows.append(columns)
-        self.cells = rows
 
+        rows = []
+        # for ri in range(nb_rows + 1):
+        #     columns = []
+        #     for ci in range(nb_cols + 1):
+        #         columns.append({"v": 0, "h": 0})
+        #     rows.append(columns)
+        # self.cells = rows
+
+        # Initialize the Game
+        self.game = DnBGame(nb_rows, nb_cols)
+        self.game.reset_game()
+
+        # Initialize the Network
+        self.nn = NNet(self.game)
+        self.nn.load_checkpoint("./alpha-zero-general/temp/","best.pth.tar")
+
+        # Initialize the MCTS and first its arguments
+        mcts_args = dotdict({'numMCTSSims': 50, 'cpuct':1.0}) #Impose Timelimit here?
+        self.mcts = MCTS(self.game, self.nn, mcts_args )
 
 
 
@@ -77,7 +93,12 @@ class DotsAndBoxesAgent:
         :param orientation: "v" or "h"
         :param player: 1 or 2
         """
-        self.cells[row][column][orientation] = player
+        # Map action to our coding for the moves
+        action = 2*(self.game.n * row + column) + (0 if orientation == 'h' else 1)
+
+        # Map players to -1, 1 convention
+        player = (-1)**(player-1)
+        self.game.getNextState(action, player)
 
     def next_action(self):
         """Return the next action this agent wants to perform.
@@ -89,22 +110,18 @@ class DotsAndBoxesAgent:
         """
         logger.info("Computing next move (grid={}x{}, player={})"\
                 .format(self.nb_rows, self.nb_cols, self.player))
-        # Random move
-        free_lines = []
-        for ri in range(len(self.cells)):
-            row = self.cells[ri]
-            for ci in range(len(row)):
-                cell = row[ci]
-                if ri < (len(self.cells) - 1) and cell["v"] == 0:
-                    free_lines.append((ri, ci, "v"))
-                if ci < (len(row) - 1) and cell["h"] == 0:
-                    free_lines.append((ri, ci, "h"))
-        if len(free_lines) == 0:
-            # Board full
-            return None
-        movei = random.randint(0, len(free_lines) - 1)
-        r, c, o = free_lines[movei]
-        return r, c, o
+
+        action = np.argmax(self.mcts.getActionProb(self.game, temp=0))
+
+        player = (-1)**(self.player-1)
+        self.game.getNextState(action,player)
+
+        o = action % 2
+        r = action/(2*self.game.n)
+        c = (action/2) % self.game.n
+
+        return r, c, ""
+
 
     def end_game(self):
         self.ended = True
