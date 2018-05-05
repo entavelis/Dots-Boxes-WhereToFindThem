@@ -1,3 +1,9 @@
+# Colorful Traceback
+try:
+    import colored_traceback.auto
+except ImportError:
+    pass
+
 try :
     from .Coach import Coach
     from .dotsandboxes.DnBGame import DnBGame as Game
