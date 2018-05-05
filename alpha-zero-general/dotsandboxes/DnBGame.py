@@ -92,6 +92,8 @@ class DnBGame():
     def getLegalKeys(self):
         return self.legalMoves.keys()
 
+    def isValidMove(self,action):
+        return action in self.legalMoves
 
     def has_legal_moves(self):
         return len(self.legalMoves)>0;

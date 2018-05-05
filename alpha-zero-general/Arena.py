@@ -54,11 +54,13 @@ class Arena():
             # +1 is to get -1 to 0 and 1 to 2 for indices
             action = players[curPlayer+1](self.game)
 
-            valids = self.game.getValidMoves()
+            # valids = self.game.getValidMoves()
 
-            if valids[action]==0:
+            # if valids[action]==0:
+            if not self.game.isValidMove(action):
                 print(action)
-                assert valids[action] >0
+                assert self.game.isValidMove(action)
+                # assert valids[action] >0
 
             curPlayer = self.game.getNextState(curPlayer, action)
 
