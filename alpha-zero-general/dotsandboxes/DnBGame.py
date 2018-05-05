@@ -148,7 +148,7 @@ class DnBGame():
         valids = [0]*self.getActionSize()
 
         # Our key is a action to mapping Dictionary
-        for key in self.legalMoves.keys:
+        for key in self.legalMoves.keys():
             valids[key] = 1
         return np.array(valids)
 

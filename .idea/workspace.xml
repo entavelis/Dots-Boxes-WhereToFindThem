@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85233d1d-615e-4409-a3b9-2c5e5650b6a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/alpha-zero-general/MCTS.py" afterPath="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" afterPath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,17 +16,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DnBGame.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DnBGame.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="156" column="70" lean-forward="false" selection-start-line="156" selection-start-column="70" selection-end-line="156" selection-end-column="70" />
+            <state relative-caret-position="459">
+              <caret line="150" column="40" lean-forward="false" selection-start-line="150" selection-start-column="40" selection-end-line="150" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MCTS.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MCTS.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
@@ -128,8 +128,8 @@
         <option value="$PROJECT_DIR$/alpha-zero-general/Arena.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/Coach.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/main.py" />
-        <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
+        <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
       </list>
     </option>
   </component>
@@ -189,6 +189,12 @@
               <item name="Dots-Boxes-WhereToFindThem" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dots-Boxes-WhereToFindThem" type="462c0819:PsiDirectoryNode" />
               <item name="alpha-zero-general" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Dots-Boxes-WhereToFindThem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dots-Boxes-WhereToFindThem" type="462c0819:PsiDirectoryNode" />
+              <item name="alpha-zero-general" type="462c0819:PsiDirectoryNode" />
+              <item name="dotsandboxes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -797,14 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="156" column="70" lean-forward="false" selection-start-line="156" selection-start-column="70" selection-end-line="156" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -812,6 +810,14 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="150" column="40" lean-forward="false" selection-start-line="150" selection-start-column="40" selection-end-line="150" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
