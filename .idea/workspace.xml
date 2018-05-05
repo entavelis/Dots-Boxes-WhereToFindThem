@@ -29,12 +29,12 @@
       <file leaf-file-name="DnBGame.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="232" column="8" lean-forward="false" selection-start-line="232" selection-start-column="8" selection-end-line="232" selection-end-column="8" />
+            <state relative-caret-position="561">
+              <caret line="121" column="20" lean-forward="false" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
                 <element signature="e#2687#2717#0" expanded="false" />
-                <element signature="e#3901#4009#0" expanded="false" />
+                <element signature="e#4176#4284#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -539,7 +539,7 @@
           <folding>
             <element signature="e#0#37#0" expanded="true" />
             <element signature="e#2687#2717#0" expanded="false" />
-            <element signature="e#3901#4009#0" expanded="false" />
+            <element signature="e#4176#4284#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -866,12 +866,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="232" column="8" lean-forward="false" selection-start-line="232" selection-start-column="8" selection-end-line="232" selection-end-column="8" />
+        <state relative-caret-position="561">
+          <caret line="121" column="20" lean-forward="false" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
             <element signature="e#2687#2717#0" expanded="false" />
-            <element signature="e#3901#4009#0" expanded="false" />
+            <element signature="e#4176#4284#0" expanded="false" />
           </folding>
         </state>
       </provider>
