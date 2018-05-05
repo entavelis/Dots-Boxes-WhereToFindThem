@@ -143,7 +143,7 @@ class DnBGame():
 
         return (player if plays_again else -player)
 
-    def getValidMoves(self, board):
+    def getValidMoves(self):
         # return a fixed size binary vector
         valids = [0]*self.getActionSize()
 
@@ -170,7 +170,7 @@ class DnBGame():
     # Maybe we should set this to turn boards so n>m
     def getCanonicalForm(self):
         # return state if player==1, else return -state if player==-1
-        return self.board
+        return self.boxes
 
     def getSymmetries(self,  pi):
 
