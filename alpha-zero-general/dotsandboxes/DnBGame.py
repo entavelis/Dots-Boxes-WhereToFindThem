@@ -262,7 +262,8 @@ class DnBGame():
     def print_legal_moves(self):
 
         temp = np.zeros((self.n,self.m))
-        for x,y,d in self.legalMoves.items():
+        for x,move in self.legalMoves.items():
+            x,y,d = move
             if d:
                 temp[x,y] += 10
             else:
