@@ -5,12 +5,8 @@ class RandomPlayer():
     def __init__(self, game):
         self.game = game
 
-    def play(self, board):
-        a = np.random.randint(self.game.getActionSize())
-        valids = self.game.getValidMoves(board, 1)
-        while valids[a] != 1:
-            a = np.random.randint(self.game.getActionSize())
-        return a
+    def play(self):
+        return np.random(self.game.getValidKeys())
 
 
 class HumanOthelloPlayer():
@@ -40,7 +36,7 @@ class GreedyOthelloPlayer():
     def __init__(self, game):
         self.game = game
 
-    def play(self, board):
+    def play(self):
         valids = self.game.getValidMoves(board, 1)
         candidates = []
         for a in range(self.game.getActionSize()):
