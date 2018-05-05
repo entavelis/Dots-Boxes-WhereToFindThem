@@ -73,7 +73,8 @@ class DnBGame():
         # self.legalMoves[(self.innerN*x+y)*2 + d] = (x,y,d)
         self.legalMoves[(self.n*x+y)*2 + d] = (x,y,d)
 
-    def pop_legal_move(self, move):
+    def pop_legal_move(self, moveno):
+        move = self.legalMoves(moveno)
         x = move[0]
         y = move[1]
         d = move[2]
@@ -136,7 +137,8 @@ class DnBGame():
         # action must be a valid move
 
         # Gets and removes the action out of the legal moves
-        move = self.pop_legal_move(action)
+
+        move = self.pop_legal_move()
 
         # checks if the box is filled
         plays_again = self.execute_move(move)
