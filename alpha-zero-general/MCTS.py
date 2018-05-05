@@ -120,6 +120,7 @@ class MCTS():
         # print(len(game.getValidMoves()))
         a = best_act
         next_player = game.getNextState(1, a)
+        print(len(game.getValidMoves()))
 
         self.Ns[s] += 1
 
