@@ -9,8 +9,9 @@ class MCTS():
     This class handles the MCTS tree.
     """
 
-    def __init__(self, game, nnet, args):
-        self.game = game
+    # def __init__(self, game, nnet, args):
+    def __init__(self, nnet, args):
+        # self.game = game
         self.nnet = nnet
         self.args = args
         self.Qsa = {}       # stores Q values for s,a (as defined in the paper)
@@ -20,7 +21,7 @@ class MCTS():
         self.Es = {}        # stores game.getGameEnded ended for board s
         self.Vs = {}        # stores game.getValidMoves for board s
 
-    def getActionProb(self, canonicalBoard, temp=1):
+    def getActionProb(self, game, temp=1):
         """
         This function performs numMCTSSims simulations of MCTS starting from
         canonicalBoard.
@@ -29,6 +30,8 @@ class MCTS():
             probs: a policy vector where the probability of the ith action is
                    proportional to Nsa[(s,a)]**(1./temp)
         """
+        self.game = game
+
         for i in range(self.args.numMCTSSims):
             game_instance = copy.deepcopy(self.game)
             self.search(game_instance)

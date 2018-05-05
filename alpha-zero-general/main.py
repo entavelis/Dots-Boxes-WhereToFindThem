@@ -18,7 +18,7 @@ except Exception:
 
 args = dotdict({
     'numIters': 500, # Changed from 1000
-    'numEps': 100,
+    'numEps': 20, # Changed from 100
     'tempThreshold': 15,
     'updateThreshold': 0.6,
     'maxlenOfQueue': 200000,

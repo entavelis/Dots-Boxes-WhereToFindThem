@@ -48,7 +48,7 @@ class Arena():
 
             # CHECK: change this to adjust nnet input?
             # +1 is to get -1 to 0 and 1 to 2 for indices
-            action = players[curPlayer+1](self.game.getCanonicalForm())
+            action = players[curPlayer+1](self.game)
 
             valids = self.game.getValidMoves()
 
