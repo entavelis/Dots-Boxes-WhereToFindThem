@@ -52,9 +52,9 @@ def main(argv=None):
 
     logger.setLevel(max(logging.INFO - 10 * (args.verbose - args.quiet), logging.DEBUG))
     logger.addHandler(logging.StreamHandler(sys.stdout))
+
     start_server(args.port)
 
 
 if __name__ == "__main__":
     sys.exit(main())
-
