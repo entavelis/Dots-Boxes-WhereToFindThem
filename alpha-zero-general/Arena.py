@@ -1,6 +1,10 @@
 import numpy as np
+try:
+    from pytorch_classification.utils import Bar, AverageMeter
+except Exception:
+    from .pytorch_classification.utils import Bar, AverageMeter
 
-from progressbar import ETA, Bar, Percentage, ProgressBar
+# from progressbar import ETA, Bar, Percentage, ProgressBar
 import time
 
 class Arena():
@@ -70,7 +74,7 @@ class Arena():
             twoWon: games won by player2
             draws:  games won by nobody
         """
-        # eps_time = AverageMeter()
+        eps_time = AverageMeter()
         bar = Bar('Arena.playGames', max=num)
         end = time.time()
         eps = 0
