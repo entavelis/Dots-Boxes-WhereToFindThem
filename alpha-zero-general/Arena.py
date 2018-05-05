@@ -1,5 +1,6 @@
 import numpy as np
-from .pytorch_classification.utils import Bar, AverageMeter
+
+from progressbar import ETA, Bar, Percentage, ProgressBar
 import time
 
 class Arena():
@@ -56,11 +57,6 @@ class Arena():
                 assert valids[action] >0
 
             curPlayer = self.game.getNextState(curPlayer, action)
-
-        if verbose:
-            assert(self.display)
-            print("Game over: Turn ", str(it), "Result ", str(self.game.getGameEnded(board, 1)))
-            self.display(board)
 
         return self.game.getGameEnded()
 

@@ -1,9 +1,9 @@
 from .Coach import Coach
 from .dotsandboxes.DnBGame import DnBGame as Game
 from .dotsandboxes.pytorch.NNet import NNetWrapper as nn
-from
+
 # from othello.keras.NNet import NNetWrapper as nn
-from utils import *
+from .utils import *
 
 args = dotdict({
     'numIters': 500, # Changed from 1000
