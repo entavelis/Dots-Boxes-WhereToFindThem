@@ -34,14 +34,15 @@ class DnBGame():
             self.boxes[i] = [0]*self.m
             # self.mask[i] = [0]*self.m
 
+        # Do I even need to store the tuple or just the hash?
         self.legalMoves = dict()
 
         # Set up the legalMoves.
         # Centers the Inner Dimensions in the center and pads
         # for i in range((self.n - self.innerN)/2,(self.n + self.innerN)/2):
-        for i in range(1,self.n):
+        for i in range(1,self.n-1):
         #     for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
-            for j in range(1,self.m):
+            for j in range(1,self.m-1):
                 # self.mask[i][j] = 1
                 # Horizontal Move
                 self.add_legal_move(i,j-1,0)
@@ -52,13 +53,13 @@ class DnBGame():
 
             # Last Horizontal
             # self.add_legal_move(i,(self.m - self.innerM)/2,0)
-            self.add_legal_move(i,self.m - 1,0)
+            self.add_legal_move(i,self.m - 2,0)
 
         # Last Verticals
         # for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
         for j in range(1,self.m):
             # self.add_legal_move((self.n + self.innerN)/2,j,1)
-            self.add_legal_move(self.n-1,j,1)
+            self.add_legal_move(self.n-2,j,1)
 
         # TOCHECK turn to np.arrays
         self.boxes = np.array(self.boxes)
@@ -127,6 +128,7 @@ class DnBGame():
         self.score += player * plays_again
 
         return plays_again
+
 
     # Returns the augmented game board with padding
     def getBoardSize(self):
