@@ -114,6 +114,7 @@ class DnBGame():
             else:
                 self.boxes[move[0]][move[1]+1] += 1
                 plays_again += self.boxes[move[0]][move[1]+1] == 4
+
         except Exception:
             print("\nMove Tried]\n")
             print(move)
@@ -121,6 +122,7 @@ class DnBGame():
             print(len(self.legalMoves))
             print("\nBoard State\n")
             print(self.boxes)
+            return None
 
 
         # Remove Move from Legal Moves O(1)

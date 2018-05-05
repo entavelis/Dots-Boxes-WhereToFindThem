@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85233d1d-615e-4409-a3b9-2c5e5650b6a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/alpha-zero-general/MCTS.py" afterPath="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" afterPath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,15 +26,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DnBGame.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DnBGame.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="121" column="20" lean-forward="false" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+            <state relative-caret-position="408">
+              <caret line="124" column="20" lean-forward="false" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
                 <element signature="e#2687#2717#0" expanded="false" />
-                <element signature="e#4176#4284#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -60,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MCTS.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MCTS.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="552">
@@ -160,9 +159,9 @@
         <option value="$PROJECT_DIR$/alpha-zero-general/Arena.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/othello/pytorch/NNet.py" />
-        <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/main.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
+        <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
       </list>
     </option>
   </component>
@@ -539,7 +538,6 @@
           <folding>
             <element signature="e#0#37#0" expanded="true" />
             <element signature="e#2687#2717#0" expanded="false" />
-            <element signature="e#4176#4284#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -838,23 +836,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="121" column="20" lean-forward="false" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+        <state relative-caret-position="552">
+          <caret line="122" column="39" lean-forward="false" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#2687#2717#0" expanded="false" />
-            <element signature="e#4176#4284#0" expanded="false" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="95" column="21" lean-forward="false" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -866,12 +854,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="122" column="39" lean-forward="false" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
+        <state relative-caret-position="410">
+          <caret line="95" column="21" lean-forward="false" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="124" column="20" lean-forward="false" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#2687#2717#0" expanded="false" />
           </folding>
         </state>
       </provider>
