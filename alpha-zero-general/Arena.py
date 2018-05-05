@@ -1,6 +1,6 @@
 import numpy as np
 
-from progressbar import ETA, Bar, Percentage, ProgressBar, AverageMeter
+from progressbar import ETA, Bar, Percentage, ProgressBar
 import time
 
 class Arena():
