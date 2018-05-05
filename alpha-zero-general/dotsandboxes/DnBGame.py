@@ -104,28 +104,19 @@ class DnBGame():
         plays_again = 0
 
         # Change board state
-        if move!=None:
-            self.boxes[move[0]][move[1]]+=1
-            plays_again += self.boxes[move[0]][move[1]] == 4
+        self.boxes[move[0]][move[1]]+=1
+        plays_again += self.boxes[move[0]][move[1]] == 4
 
-            if move[2]:
-                self.boxes[move[0]+1][move[1]] += 1
-                plays_again += self.boxes[move[0]+1][move[1]] == 4
-            else:
-                self.boxes[move[0]][move[1]+1] += 1
-                plays_again += self.boxes[move[0]][move[1]+1] == 4
-
+        if move[2]:
+            self.boxes[move[0]+1][move[1]] += 1
+            plays_again += self.boxes[move[0]+1][move[1]] == 4
         else:
-            print("\nMove Tried]\n")
-            print(move)
-            print("\nMoves Left\n")
-            print(len(self.legalMoves))
-            print("\nBoard State\n")
-            print(self.boxes)
-            raise ValueError
+            self.boxes[move[0]][move[1]+1] += 1
+            plays_again += self.boxes[move[0]][move[1]+1] == 4
 
 
-        # Remove Move from Legal Moves O(1)
+
+    # Remove Move from Legal Moves O(1)
         # self.remove_legal_move(move)
 
         # Adjust Score
@@ -152,6 +143,16 @@ class DnBGame():
         # Gets and removes the action out of the legal moves
 
         move = self.pop_legal_move(action)
+
+        if move==None:
+            print("\nMove Tried]\n")
+            print(move)
+            print("\nMoves Left\n")
+            print(len(self.legalMoves))
+            print("\nBoard State\n")
+            print(self.boxes)
+            raise ValueError
+
 
         # checks if the box is filled
         plays_again = self.execute_move(move, player)
