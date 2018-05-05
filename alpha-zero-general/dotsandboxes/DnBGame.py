@@ -69,17 +69,18 @@ class DnBGame():
         return self.boxes[index]
 
     def add_legal_move(self, x, y, d):
-        # Check legal moves sizes
+        # Check legal moves sizes.legalMoves
         # self.legalMoves[(self.innerN*x+y)*2 + d] = (x,y,d)
         self.legalMoves[(self.n*x+y)*2 + d] = (x,y,d)
 
     def pop_legal_move(self, moveno):
-        move = self.legalMoves(moveno)
-        x = move[0]
-        y = move[1]
-        d = move[2]
+        return self.legalMoves.pop(moveno, None)
+        # move = self.legalMoves(moveno)
+        # x = move[0]
+        # y = move[1]
+        # d = move[2]
 
-        return self.legalMoves.pop((self.innerN*x+y)*2 + d, None)
+        # return self.legalMoves.pop((self.innerN*x+y)*2 + d, None)
 
 
     def get_legal_moves(self):
@@ -138,7 +139,7 @@ class DnBGame():
 
         # Gets and removes the action out of the legal moves
 
-        move = self.pop_legal_move()
+        move = self.pop_legal_move(action)
 
         # checks if the box is filled
         plays_again = self.execute_move(move)
