@@ -36,7 +36,7 @@ class MCTS():
             print("NEW SIMULATION STARTED",flush=True)
             game_instance = copy.deepcopy(self.game)
             self.search(game_instance)
-            print(i),flush=True)
+            print(i,flush=True)
             print("SIMULATION ENDED",flush=True)
 
         s = self.game.stringRepresentation()
