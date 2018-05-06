@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f5395820-6ff2-4cf1-ba12-eb286b79b691" name="hoei" url="http://localhost">
+        <fileTransfer host="localhost" port="6000" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/cw/thesis-r0692337" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="6000" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

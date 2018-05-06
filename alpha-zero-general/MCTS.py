@@ -33,11 +33,11 @@ class MCTS():
         self.game = game
 
         for i in range(self.args.numMCTSSims):
-            print("NEW SIMULATION STARTED",flush=True)
+            # print("NEW SIMULATION STARTED",flush=True)
             game_instance = copy.deepcopy(self.game)
             self.search(game_instance)
-            print(i,flush=True)
-            print("SIMULATION ENDED",flush=True)
+            # print(i,flush=True)
+            # print("SIMULATION ENDED",flush=True)
 
         s = self.game.stringRepresentation()
         counts = [self.Nsa[(s,a)] if (s,a) in self.Nsa else 0 for a in range(self.game.getActionSize())]
@@ -120,7 +120,7 @@ class MCTS():
         # pick the action with the highest upper confidence bound
         # for a in range(game.getActionSize()):
         #     if valids[a]:
-        print(len(valids),flush=True)
+        # print(len(valids),flush=True)
         for a in valids:
                 if (s,a) in self.Qsa:
                     u = self.Qsa[(s,a)] + self.args.cpuct*self.Ps[s][a]*math.sqrt(self.Ns[s])/(1+self.Nsa[(s,a)])
