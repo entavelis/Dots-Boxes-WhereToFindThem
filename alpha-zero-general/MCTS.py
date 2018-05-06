@@ -36,6 +36,8 @@ class MCTS():
             print("NEW SIMULATION STARTED",flush=True)
             game_instance = copy.deepcopy(self.game)
             self.search(game_instance)
+            print(i),flush=True)
+            print("SIMULATION ENDED",flush=True)
 
         s = self.game.stringRepresentation()
         counts = [self.Nsa[(s,a)] if (s,a) in self.Nsa else 0 for a in range(self.game.getActionSize())]
