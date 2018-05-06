@@ -17,8 +17,8 @@ except Exception:
 
 
 args = dotdict({
-    'numIters': 100, # Changed from 1000
-    'numEps': 20, # Changed from 100
+    'numIters': 10, # Changed from 1000
+    'numEps': 5, # Changed from 100
     'tempThreshold': 15,
     'updateThreshold': 0.6,
     'maxlenOfQueue': 200000,
@@ -38,7 +38,7 @@ args = dotdict({
 
 if __name__=="__main__":
 
-    g = Game(6,6)
+    g = Game(10,10)
     nnet = nn(g)
 
     if args.load_model:

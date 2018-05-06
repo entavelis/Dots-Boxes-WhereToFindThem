@@ -33,7 +33,7 @@ class MCTS():
         self.game = game
 
         for i in range(self.args.numMCTSSims):
-            # print("NEW SIMULATION STARTED")
+            print("NEW SIMULATION STARTED",flush=True)
             game_instance = copy.deepcopy(self.game)
             self.search(game_instance)
 
