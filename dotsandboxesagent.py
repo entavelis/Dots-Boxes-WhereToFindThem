@@ -17,7 +17,7 @@ import json
 from collections import defaultdict
 import random
 
-import np
+import numpy as np
 from alpha-zero-general.MCTS import MCTS
 from alpha-zero-general.dotsandboxes.DnBGame import DnBGame
 from alpha-zero-general.dotsandboxes.NNet import NNetWrapper as NNet
@@ -73,7 +73,7 @@ class DotsAndBoxesAgent:
 
         # Initialize the Network
         self.nn = NNet(self.game)
-        self.nn.load_checkpoint("./alpha-zero-general/temp/","best.pth.tar")
+        self.nn.load_checkpoint("./alpha-zero-general/","best.pth.tar")
 
         # Initialize the MCTS and first its arguments
         mcts_args = dotdict({'numMCTSSims': 50, 'cpuct':1.0}) #Impose Timelimit here?
@@ -120,7 +120,7 @@ class DotsAndBoxesAgent:
         r = action/(2*self.game.n)
         c = (action/2) % self.game.n
 
-        return r, c, ""
+        return r, c, "v" if o else "h"
 
 
     def end_game(self):
