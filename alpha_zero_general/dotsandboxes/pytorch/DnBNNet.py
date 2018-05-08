@@ -1,6 +1,9 @@
 import sys
 sys.path.append('..')
-from utils import *
+try:
+    from utils import *
+except:
+    from alpha_zero_general.utils import *
 
 import argparse
 import torch

@@ -59,7 +59,8 @@ class Arena():
             # if valids[action]==0:
             if not self.game.isValidMove(action):
                 print(action)
-                assert self.game.isValidMove(action)
+                print(self.game.printLegalMoves())
+                assert(self.game.isValidMove(action),str(action) + " not in " + str(self.game.getLegalMoves()))
                 # assert valids[action] >0
 
             curPlayer = self.game.getNextState(curPlayer, action)

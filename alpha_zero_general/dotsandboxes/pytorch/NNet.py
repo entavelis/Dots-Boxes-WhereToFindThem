@@ -7,9 +7,14 @@ import numpy as np
 import math
 import sys
 sys.path.append('../../')
-from utils import *
-from pytorch_classification.utils import Bar, AverageMeter
-from NeuralNet import NeuralNet
+try:
+    from utils import *
+    from pytorch_classification.utils import Bar, AverageMeter
+    from NeuralNet import NeuralNet
+except Exception:
+    from alpha_zero_general.utils import *
+    from alpha_zero_general.pytorch_classification.utils import Bar, AverageMeter
+    from alpha_zero_general.NeuralNet import NeuralNet
 
 import argparse
 import torch
@@ -144,10 +149,14 @@ class NNetWrapper(NeuralNet):
             'state_dict' : self.nnet.state_dict(),
         }, filepath)
 
-    def load_checkpoint(self, folder='checkpoint', filename='checkpoint.pth.tar'):
+    def load_checkpoint(self, folder='checkpoint', filename='checkpoint.pth.tar', cpu='False'):
         # https://github.com/pytorch/examples/blob/master/imagenet/main.py#L98
         filepath = os.path.join(folder, filename)
+        print("Saving in " + str(filepath))
         if not os.path.exists(filepath):
             raise("No model in path {}".format(filepath))
-        checkpoint = torch.load(filepath)
+        if cpu:
+            checkpoint = torch.load(filepath, map_location='cpu')
+        else:
+            checkpoint = torch.load(filepath)
         self.nnet.load_state_dict(checkpoint['state_dict'])

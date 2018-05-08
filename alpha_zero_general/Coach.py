@@ -118,9 +118,11 @@ class Coach():
                 trainExamples.extend(e)
             shuffle(trainExamples)
 
+            tempfile =  'temp.pth.tar'
+            bestfile =  'best.pth.tar'
             # training new network, keeping a copy of the old one
-            self.nnet.save_checkpoint(folder=self.args.checkpoint, filename='temp.pth.tar')
-            self.pnet.load_checkpoint(folder=self.args.checkpoint, filename='temp.pth.tar')
+            self.nnet.save_checkpoint(folder=self.args.checkpoint, filename=tempfile)
+            self.pnet.load_checkpoint(folder=self.args.checkpoint, filename=tempfile)
             # pmcts = MCTS(self.game, self.pnet, self.args)
             pmcts = MCTS(self.pnet, self.args)
 
@@ -136,11 +138,11 @@ class Coach():
             print('NEW/PREV WINS : %d / %d ; DRAWS : %d' % (nwins, pwins, draws))
             if pwins+nwins > 0 and float(nwins)/(pwins+nwins) < self.args.updateThreshold:
                 print('REJECTING NEW MODEL')
-                self.nnet.load_checkpoint(folder=self.args.checkpoint, filename='temp.pth.tar')
+                self.nnet.load_checkpoint(folder=self.args.checkpoint, filename=tempfile)
             else:
                 print('ACCEPTING NEW MODEL')
                 self.nnet.save_checkpoint(folder=self.args.checkpoint, filename=self.getCheckpointFile(i))
-                self.nnet.save_checkpoint(folder=self.args.checkpoint, filename='best.pth.tar')                
+                self.nnet.save_checkpoint(folder=self.args.checkpoint, filename=bestfile)
 
     def getCheckpointFile(self, iteration):
         return 'checkpoint_' + str(iteration) + '.pth.tar'

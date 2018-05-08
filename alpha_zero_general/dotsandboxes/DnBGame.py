@@ -76,19 +76,19 @@ class DnBGame():
     def add_legal_move(self, x, y, d):
         # Check legal moves sizes.legalMoves
         # self.legalMoves[(self.innerN*x+y)*2 + d] = (x,y,d)
-        self.legalMoves[(self.n*x+y)*2 + d] = (x,y,d)
+        self.legalMoves[(self.m*x+y)*2 + d] = (x,y,d)
 
     def pop_legal_move(self, moveno):
         return self.legalMoves.pop(moveno, None)
-        # move = self.legalMoves(moveno)
-        # x = move[0]
-        # y = move[1]
-        # d = move[2]
+        move = self.legalMoves(moveno)
+        x = move[0]
+        y = move[1]
+        d = move[2]
 
-        # return self.legalMoves.pop((self.innerN*x+y)*2 + d, None)
+        return self.legalMoves.pop((self.innerN*x+y)*2 + d, None)
 
 
-    def get_legal_moves(self):
+    def getLegalMoves(self):
         return self.legalMoves
 
     def getLegalKeys(self):
@@ -97,10 +97,10 @@ class DnBGame():
     def isValidMove(self,action):
         return action in self.legalMoves
 
-    def has_legal_moves(self):
+    def hasLegalMoves(self):
         return len(self.legalMoves)>0;
 
-    def execute_move(self, move, player):
+    def executeMove(self, move, player):
         """
         Executes the move, removes it from the legal moves and adjusts the score
         :param move: the tuple x,y,direction
@@ -163,12 +163,12 @@ class DnBGame():
             print(len(self.legalMoves))
             print("\nBoard State\n")
             print(self.boxes)
-            self.print_legal_moves()
-            raise ValueError
+            self.printLegalMoves()
+            # raise ValueError
 
 
         # checks if the box is filled
-        plays_again = self.execute_move(move, player)
+        plays_again = self.executeMove(move, player)
 
         return (player if plays_again else -player)
 
@@ -185,7 +185,7 @@ class DnBGame():
     def getGameEnded(self):
         # return 0 if not ended, 1 if player 1 won, -1 if player 1 lost
         # player = 1
-        if self.has_legal_moves():
+        if self.hasLegalMoves():
             return 0
 
         # Checks for draw
@@ -227,21 +227,28 @@ class DnBGame():
         temp_pi_down = pi_down_board
         temp_pi_left = pi_left_board
         l.append((board, list(pi)))
-
+        # print("\nBoard " + str(i))
+        # print(temp_pi_left)
         # Flipped
-        l.append((temp_board, _merge(temp_pi_left, temp_pi_down)))
+        b, pid, pil = _get_flipped(temp_board, temp_pi_down, temp_pi_left)
+        # print("\nFlipped Board " + str(i))
+        # print(pil)
+        l.append((b, _merge(pil,pid)))
 
         for i in range(1,4):
             # 90*i degrees
             temp_board, temp_pi_down, temp_pi_left = _get_rotated(temp_board, temp_pi_down, temp_pi_left)
 
             if square or i==2:
+                # print("\nBoard " + str(i))
+                # print(temp_pi_left)
                 l.append((temp_board,_merge(temp_pi_left,temp_pi_down)))
 
                 # flipped
                 b, pid, pil = _get_flipped(temp_board, temp_pi_down, temp_pi_left)
-
-                l.append((b, _merge(pid,pil)))
+                # print("\nFlipped Board " + str(i))
+                # print(pil)
+                l.append((b, _merge(pil,pid)))
 
         #
         #
@@ -260,7 +267,7 @@ class DnBGame():
         # 8x8 numpy array (canonical board)
         return self.boxes.tostring()
 
-    def print_legal_moves(self):
+    def printLegalMoves(self):
 
         temp = np.zeros((self.n,self.m))
         for x,move in self.legalMoves.items():
@@ -297,7 +304,7 @@ def _get_flipped(board, down, left):
     temp_board = np.fliplr(board)
     temp_down = np.fliplr(down)
     temp_left = _pi_fliplr(left)
-    return board, temp_down, temp_left
+    return temp_board, temp_down, temp_left
 
 
 def _pi_fliplr(board):

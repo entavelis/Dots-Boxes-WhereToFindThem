@@ -2,8 +2,106 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85233d1d-615e-4409-a3b9-2c5e5650b6a0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Dots-Boxes-WhereToFindThem.iml" afterPath="$PROJECT_DIR$/.idea/Dots-Boxes-WhereToFindThem.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/alpha-zero-general/main.py" afterPath="$PROJECT_DIR$/alpha-zero-general/main.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/.gitignore" afterPath="$PROJECT_DIR$/alpha_zero_general/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/Arena.py" afterPath="$PROJECT_DIR$/alpha_zero_general/Arena.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/Coach.py" afterPath="$PROJECT_DIR$/alpha_zero_general/Coach.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/Game.py" afterPath="$PROJECT_DIR$/alpha_zero_general/Game.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/LICENSE" afterPath="$PROJECT_DIR$/alpha_zero_general/LICENSE" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/MCTS.py" afterPath="$PROJECT_DIR$/alpha_zero_general/MCTS.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/NeuralNet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/NeuralNet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/README.md" afterPath="$PROJECT_DIR$/alpha_zero_general/README.md" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/best.pth.tar" afterPath="$PROJECT_DIR$/alpha_zero_general/best.pth.tar" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" afterPath="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/DnBGame.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBLogic.py" afterPath="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/DnBLogic.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBPlayers.py" afterPath="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/DnBPlayers.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/keras/NNet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/keras/OthelloNNet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/keras/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/DnBNNet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/pytorch/DnBNNet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/pytorch/NNet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tensorflow/DnBNNet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tensorflow/NNet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tensorflow/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py" afterPath="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/tester.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/gobang/GobangGame.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/gobang/GobangLogic.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/gobang/GobangPlayers.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/gobang/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/gobang/keras/GobangNNet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/gobang/keras/NNet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/gobang/tensorflow/GobangNNet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/gobang/tensorflow/NNet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/gobang/tensorflow/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/main.py" afterPath="$PROJECT_DIR$/alpha_zero_general/main.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/OthelloGame.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/OthelloGame.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/OthelloLogic.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/OthelloLogic.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/OthelloPlayers.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/OthelloPlayers.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/keras/NNet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/keras/NNet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/keras/OthelloNNet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/keras/OthelloNNet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/keras/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/tensorflow/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/pytorch/NNet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/pytorch/NNet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/pytorch/OthelloNNet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/pytorch/OthelloNNet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/pytorch/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/pytorch/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/tensorflow/NNet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/tensorflow/NNet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/tensorflow/OthelloNNet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/tensorflow/OthelloNNet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/othello/tensorflow/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/keras/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pit.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pit.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pretrained_models/6x6.png" afterPath="$PROJECT_DIR$/alpha_zero_general/pretrained_models/6x6.png" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pretrained_models/othello/keras/6x6 checkpoint_145.pth.tar" afterPath="$PROJECT_DIR$/alpha_zero_general/pretrained_models/othello/keras/6x6 checkpoint_145.pth.tar" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pretrained_models/othello/pytorch/6x100x25_best.pth.tar" afterPath="$PROJECT_DIR$/alpha_zero_general/pretrained_models/othello/pytorch/6x100x25_best.pth.tar" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pretrained_models/othello/pytorch/6x6_153checkpoints_best.pth.tar" afterPath="$PROJECT_DIR$/alpha_zero_general/pretrained_models/othello/pytorch/6x6_153checkpoints_best.pth.tar" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pretrained_models/othello/pytorch/8x8_100checkpoints_best.pth.tar" afterPath="$PROJECT_DIR$/alpha_zero_general/pretrained_models/othello/pytorch/8x8_100checkpoints_best.pth.tar" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pretrained_models/tictactoe/keras/best-25eps-25sim-10epch.pth.tar" afterPath="$PROJECT_DIR$/alpha_zero_general/pretrained_models/tictactoe/keras/best-25eps-25sim-10epch.pth.tar" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pretrained_models/writeup.pdf" afterPath="$PROJECT_DIR$/alpha_zero_general/pretrained_models/writeup.pdf" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/README.md" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/README.md" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/TRAINING.md" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/TRAINING.md" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/othello/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/cifar.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/cifar.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/imagenet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/imagenet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/models/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/pytorch/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/models/cifar/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/models/cifar/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/models/cifar/alexnet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/models/cifar/alexnet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/models/cifar/densenet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/models/cifar/densenet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/models/cifar/preresnet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/models/cifar/preresnet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/models/cifar/resnet.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/models/cifar/resnet.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/models/cifar/resnext.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/models/cifar/resnext.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/models/cifar/vgg.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/models/cifar/vgg.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/models/cifar/wrn.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/models/cifar/wrn.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/models/imagenet/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/models/imagenet/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/models/imagenet/resnext.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/models/imagenet/resnext.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/eval.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/eval.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/images/cifar.png" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/images/cifar.png" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/images/imagenet.png" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/images/imagenet.png" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/logger.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/logger.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/misc.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/misc.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/progress/LICENSE" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/progress/LICENSE" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/progress/MANIFEST.in" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/progress/MANIFEST.in" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/progress/README.rst" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/progress/README.rst" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/progress/demo.gif" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/progress/demo.gif" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/progress/progress/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/progress/progress/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/progress/progress/bar.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/progress/progress/bar.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/progress/progress/counter.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/progress/progress/counter.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/progress/progress/helpers.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/progress/progress/helpers.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/progress/progress/spinner.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/progress/progress/spinner.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/progress/setup.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/progress/setup.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/progress/test_progress.py" afterPath="$PROJECT_DIR$/alpha_zero_general/pytorch_classification/utils/progress/test_progress.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/tictactoe/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/tictactoe/TicTacToeGame.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/tictactoe/TicTacToeLogic.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/tictactoe/TicTacToePlayers.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/tictactoe/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/tictactoe/keras/NNet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/tictactoe/keras/TicTacToeNNet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/tictactoe/keras/__init__.py" afterPath="$PROJECT_DIR$/alpha_zero_general/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/alpha-zero-general/utils.py" afterPath="$PROJECT_DIR$/alpha_zero_general/utils.py" />
+      <change beforePath="$PROJECT_DIR$/dotsandboxesagent.py" afterPath="$PROJECT_DIR$/dotsandboxesagent.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,132 +111,106 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Dots_Boxes_WhereToFindThem$main.coverage" NAME="main Coverage Results" MODIFIED="1525604975554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/alpha-zero-general" />
+    <SUITE FILE_PATH="coverage/Dots_Boxes_WhereToFindThem$DnBNNet.coverage" NAME="DnBNNet Coverage Results" MODIFIED="1525689783657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/pytorch" />
+    <SUITE FILE_PATH="coverage/Dots_Boxes_WhereToFindThem$dotsandboxesagent_random.coverage" NAME="dotsandboxesagent_random Coverage Results" MODIFIED="1525790640095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Dots_Boxes_WhereToFindThem$tester.coverage" NAME="tester Coverage Results" MODIFIED="1525564401646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/alpha-zero-general/dotsandboxes" />
-    <SUITE FILE_PATH="coverage/Dots_Boxes_WhereToFindThem$dotsandboxesagent.coverage" NAME="dotsandboxesagent Coverage Results" MODIFIED="1525564404157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Dots_Boxes_WhereToFindThem$dotsandboxescompete.coverage" NAME="dotsandboxescompete Coverage Results" MODIFIED="1525788149582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Dots_Boxes_WhereToFindThem$main.coverage" NAME="main Coverage Results" MODIFIED="1525813971857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/alpha_zero_general" />
+    <SUITE FILE_PATH="coverage/Dots_Boxes_WhereToFindThem$dotsandboxesserver.coverage" NAME="dotsandboxesserver Coverage Results" MODIFIED="1525783447489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Dots_Boxes_WhereToFindThem$dotsandboxesagent.coverage" NAME="dotsandboxesagent Coverage Results" MODIFIED="1525798509004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="dotsandboxesagent.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dotsandboxesagent.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DnBGame.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="799">
-                  <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
-                    <element signature="e#2923#2953#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DnBPlayers.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBPlayers.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pit.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/alpha-zero-general/pit.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#0#12#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/alpha-zero-general/main.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="49">
-                  <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="tester.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1224">
-                  <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MCTS.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1122">
-                  <caret line="68" column="73" lean-forward="false" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Coach.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/alpha-zero-general/Coach.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2142">
-                  <caret line="131" column="48" lean-forward="false" selection-start-line="131" selection-start-column="48" selection-end-line="131" selection-end-column="48" />
-                  <folding>
-                    <element signature="e#0#29#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="pit.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/alpha-zero-general/pit.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#12#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Arena.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/alpha-zero-general/Arena.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alpha_zero_general/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="59" column="12" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Coach.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/alpha_zero_general/Coach.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="92" column="25" lean-forward="false" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NNet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alpha_zero_general/dotsandboxes/pytorch/NNet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="123" column="51" lean-forward="false" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DnBGame.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alpha_zero_general/dotsandboxes/DnBGame.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1343">
+              <caret line="179" column="23" lean-forward="false" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Arena.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alpha_zero_general/Arena.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+              <folding>
+                <element signature="e#1987#2206#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MCTS.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alpha_zero_general/MCTS.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#790#2155#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DnBNNet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alpha_zero_general/dotsandboxes/pytorch/DnBNNet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alpha_zero_general/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -146,6 +218,12 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>`</find>
+      <find>Checkpoint</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -175,9 +253,17 @@
         <option value="$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/main.py" />
-        <option value="$PROJECT_DIR$/dotsandboxesagent.py" />
         <option value="$PROJECT_DIR$/alpha-zero-general/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/pytorch/DnBNNet.py" />
+        <option value="$PROJECT_DIR$/dotsandboxesagent_random.py" />
+        <option value="$PROJECT_DIR$/dotsandboxesagent.py" />
+        <option value="$PROJECT_DIR$/alpha_zero_general/main.py" />
+        <option value="$PROJECT_DIR$/alpha_zero_general/Coach.py" />
+        <option value="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/pytorch/NNet.py" />
+        <option value="$PROJECT_DIR$/alpha_zero_general/dotsandboxes/DnBGame.py" />
+        <option value="$PROJECT_DIR$/alpha_zero_general/Arena.py" />
+        <option value="$PROJECT_DIR$/alpha_zero_general/MCTS.py" />
       </list>
     </option>
   </component>
@@ -236,12 +322,12 @@
             <path>
               <item name="Dots-Boxes-WhereToFindThem" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dots-Boxes-WhereToFindThem" type="462c0819:PsiDirectoryNode" />
-              <item name="alpha-zero-general" type="462c0819:PsiDirectoryNode" />
+              <item name="alpha_zero_general" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dots-Boxes-WhereToFindThem" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dots-Boxes-WhereToFindThem" type="462c0819:PsiDirectoryNode" />
-              <item name="alpha-zero-general" type="462c0819:PsiDirectoryNode" />
+              <item name="alpha_zero_general" type="462c0819:PsiDirectoryNode" />
               <item name="dotsandboxes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -253,16 +339,21 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -277,6 +368,16 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="dotsandboxesagent" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dotsandboxesagent" />
+      <option name="PARAMETERS" value="" />
+      <module name="Dots-Boxes-WhereToFindThem" />
+      <envs />
+    </configuration>
     <configuration name="dotsandboxesagent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -291,12 +392,12 @@
       <module name="Dots-Boxes-WhereToFindThem" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dotsandboxesagent.py" />
-      <option name="PARAMETERS" value="8045" />
+      <option name="PARAMETERS" value="8046" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="dotsandboxesserver" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="dotsandboxesagent_random" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -309,8 +410,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Dots-Boxes-WhereToFindThem" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dotsandboxesserver.py" />
-      <option name="PARAMETERS" value="8045" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dotsandboxesagent_random.py" />
+      <option name="PARAMETERS" value="8047" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="dotsandboxescompete" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Dots-Boxes-WhereToFindThem" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dotsandboxescompete.py" />
+      <option name="PARAMETERS" value="-r 3 -c 3 ws://127.0.0.1:8046 ws://127.0.0.1:8047" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -321,50 +441,33 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/alpha-zero-general" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="ssh://r0692337@localhost:6000/cw/thesis-r0692337/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/alpha_zero_general" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Dots-Boxes-WhereToFindThem" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/alpha-zero-general/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/alpha_zero_general/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="tester" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Dots-Boxes-WhereToFindThem" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.dotsandboxesagent" />
-      <item index="1" class="java.lang.String" itemvalue="Python.dotsandboxesserver" />
-      <item index="2" class="java.lang.String" itemvalue="Python.main" />
-      <item index="3" class="java.lang.String" itemvalue="Python.tester" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Bash.dotsandboxesagent" />
+      <item index="1" class="java.lang.String" itemvalue="Python.dotsandboxesagent_random" />
+      <item index="2" class="java.lang.String" itemvalue="Python.dotsandboxesagent" />
+      <item index="3" class="java.lang.String" itemvalue="Python.dotsandboxescompete" />
+      <item index="4" class="java.lang.String" itemvalue="Python.main" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
         <item index="1" class="java.lang.String" itemvalue="Python.dotsandboxesagent" />
-        <item index="2" class="java.lang.String" itemvalue="Python.tester" />
-        <item index="3" class="java.lang.String" itemvalue="Python.dotsandboxesserver" />
+        <item index="2" class="java.lang.String" itemvalue="Python.dotsandboxesagent_random" />
+        <item index="3" class="java.lang.String" itemvalue="Python.dotsandboxescompete" />
+        <item index="4" class="java.lang.String" itemvalue="Bash.dotsandboxesagent" />
       </list>
     </recent_temporary>
   </component>
@@ -427,54 +530,43 @@
     <option name="localTasksCounter" value="7" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="14" width="1920" height="1066" extended-state="6" />
+    <frame x="0" y="14" width="960" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297986" sideWeight="0.506424" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.378579" sideWeight="0.49357602" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17398119" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34313726" sideWeight="0.5085653" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16775599" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4117647" sideWeight="0.4914347" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36453745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.6782655" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297986" sideWeight="0.506424" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12513256" sideWeight="0.49357602" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12687366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.6782655" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -488,351 +580,210 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dotsandboxesserver.py</url>
-          <line>41</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dotsandboxesserver.py</url>
-          <line>42</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dotsandboxesserver.py</url>
-          <line>40</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBLogic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="114" column="31" lean-forward="false" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/OthelloGame.py">
+    <entry file="file://C:/Projects/crypto_arbitrage/binance_client.py" />
+    <entry file="file://C:/Projects/crypto_arbitrage/arbitrage_analysis.py" />
+    <entry file="file://C:/Projects/crypto_arbitrage/main.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/tictactoe/TicTacToeLogic.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/tictactoe/TicTacToeGame.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tensorflow/DnBNNet.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/OthelloLogic.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/Game.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/NeuralNet.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/OthelloGame.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/logger.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/pytorch_classification/cifar.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tensorflow/NNet.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBLogic.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/DnBNNet.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/pytorch/NNet.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/pytorch/OthelloNNet.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/Coach.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/Arena.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBPlayers.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/README.md" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/pit.py" />
+    <entry file="file://$PROJECT_DIR$/alpha-zero-general/main.py" />
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/othello/pytorch/NNet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#2923#2953#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/Arena.py">
+    <entry file="file://$USER_HOME$/venv/3.6/lib/python3.6/site-packages/torch/cuda/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="74" lean-forward="true" selection-start-line="52" selection-start-column="74" selection-end-line="52" selection-end-column="74" />
+        <state relative-caret-position="191">
+          <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/OthelloLogic.py">
+    <entry file="file://$USER_HOME$/venv/3.6/lib/python3.6/site-packages/torch/nn/modules/module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="106" selection-end-column="77" />
+        <state relative-caret-position="527">
+          <caret line="719" column="44" lean-forward="false" selection-start-line="719" selection-start-column="44" selection-end-line="719" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/gobang/GobangLogic.py">
+    <entry file="file://$USER_HOME$/venv/3.6/lib/python3.6/site-packages/websockets/protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/NeuralNet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/gobang/GobangPlayers.py">
+    <entry file="file://$PROJECT_DIR$/dotsandboxesagent">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotsandboxescompete.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/websockets/handshake.py" />
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/gobang/GobangGame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dotsandboxesserver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="53" column="56" lean-forward="false" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+        <state relative-caret-position="544">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotsandboxesagent_random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="57" column="14" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/pretrained_models/6x6.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotsandboxescompete.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/pit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/keras/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/keras/NNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/keras/NNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/OthelloPlayers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/keras/OthelloNNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="87" lean-forward="false" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Projects/crypto_arbitrage/risk_modelling.py" />
-    <entry file="file://C:/Projects/crypto_arbitrage/data_storage.py" />
-    <entry file="file://C:/Projects/crypto_arbitrage/binance_client.py" />
-    <entry file="file://C:/Projects/crypto_arbitrage/arbitrage_analysis.py" />
-    <entry file="file://C:/Projects/crypto_arbitrage/main.py" />
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/tictactoe/TicTacToeLogic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/tictactoe/TicTacToeGame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tensorflow/DnBNNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="36" column="45" lean-forward="false" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/OthelloLogic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/Game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/NeuralNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/OthelloGame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="80" column="22" lean-forward="false" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/logger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/pytorch_classification/cifar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tensorflow/NNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBLogic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/pytorch_classification/utils/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/NNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2091">
-          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/pytorch/DnBNNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="77" lean-forward="false" selection-start-line="49" selection-start-column="77" selection-end-line="49" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/pytorch/NNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="44" column="10" lean-forward="false" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/othello/pytorch/OthelloNNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/MCTS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="68" column="73" lean-forward="false" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/Coach.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="131" column="48" lean-forward="false" selection-start-line="131" selection-start-column="48" selection-end-line="131" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/tester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/Arena.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBPlayers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/README.md" />
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/dotsandboxes/DnBGame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#2923#2953#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dotsandboxesagent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="0">
+          <caret line="317" column="0" lean-forward="false" selection-start-line="317" selection-start-column="0" selection-end-line="317" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/pit.py">
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/dotsandboxes/pytorch/DnBNNet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="421">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/othello/tensorflow/NNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="116" column="37" lean-forward="false" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/dotsandboxes/pytorch/NNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="123" column="51" lean-forward="false" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha-zero-general/main.py">
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/dotsandboxes/DnBGame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        <state relative-caret-position="-1343">
+          <caret line="179" column="23" lean-forward="false" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/MCTS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#790#2155#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/Arena.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding>
+            <element signature="e#1987#2206#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="59" column="12" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha_zero_general/Coach.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="92" column="25" lean-forward="false" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
           <folding />
         </state>
       </provider>

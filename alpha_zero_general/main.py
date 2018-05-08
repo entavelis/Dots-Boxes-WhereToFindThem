@@ -17,29 +17,38 @@ except Exception:
 
 
 args = dotdict({
-    'numIters': 2, # Changed from 1000
-    'numEps': 20, # Changed from 100
+    'numIters': 100, # Changed from 1000
+    'numEps': 50, # Changed from 100
     'tempThreshold': 15,
-    'updateThreshold': 0.6,
+    'updateThreshold': 0.55, # Changed from 0.6
     'maxlenOfQueue': 200000,
     'numMCTSSims': 25, # Changed from 25
-    'arenaCompare': 10, # Changed from 40
+    'arenaCompare': 41, # Changed from 40
     'cpuct': 1,
 
-    'checkpoint': './temp/',
+    'checkpoint': './models/',
     'load_model': False,
     'load_folder_file': ('/dev/models/8x100x50','best.pth.tar'),
     'numItersForTrainExamplesHistory': 20,
 
     # OUR PARAMETERS
-    'sequential_training': True, #Starting from smaller boards and going upwards
-    'max_board': 10
+    'sequential_training': True, #Starting from smaller boards and going upwards,
+    'max_board': 10,
+    'time_limit': 0, # Zero means no time limit
+    'rows': 4,
+    'columns': 4
 })
 
 if __name__=="__main__":
 
-    g = Game(10,10)
+    g = Game(args.rows,args.columns)
     nnet = nn(g)
+
+    args.checkpoint += "dim" + str(args.rows) + 'x' + str(args.columns) + "/"
+
+    print("Rows: " + str(args.rows))
+    print("Columns: " + str(args.columns))
+
 
     if args.load_model:
         nnet.load_checkpoint(args.load_folder_file[0], args.load_folder_file[1])

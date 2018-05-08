@@ -1,6 +1,7 @@
 import math
 import numpy as np
 import copy
+import time
 
 EPS = 1e-8
 
@@ -21,7 +22,7 @@ class MCTS():
         self.Es = {}        # stores game.getGameEnded ended for board s
         self.Vs = {}        # stores game.getValidMoves for board s
 
-    def getActionProb(self, game, temp=1):
+    def getActionProb(self, game, temp=1, timelimit=False):
         """
         This function performs numMCTSSims simulations of MCTS starting from
         canonicalBoard.
@@ -32,12 +33,21 @@ class MCTS():
         """
         self.game = game
 
-        for i in range(self.args.numMCTSSims):
-            # print("NEW SIMULATION STARTED",flush=True)
-            game_instance = copy.deepcopy(self.game)
-            self.search(game_instance)
-            # print(i,flush=True)
-            # print("SIMULATION ENDED",flush=True)
+        if self.args.time_limit:
+            timeleft = self.args.time_limit
+            tmptime = 0
+            while timeleft>tmptime:
+                temptime = time.time();
+                game_instance = copy.deepcopy(self.game)
+                temptime = time.time() - temptime;
+                self.search(game_instance)
+        else:
+            for i in range(self.args.numMCTSSims):
+                # print("NEW SIMULATION STARTED",flush=True)
+                game_instance = copy.deepcopy(self.game)
+                self.search(game_instance)
+                # print(i,flush=True)
+                # print("SIMULATION ENDED",flush=True)
 
         s = self.game.stringRepresentation()
         counts = [self.Nsa[(s,a)] if (s,a) in self.Nsa else 0 for a in range(self.game.getActionSize())]
@@ -85,17 +95,18 @@ class MCTS():
 
         if s not in self.Ps:
             # leaf node
-            self.Ps[s], v = self.nnet.predict(game.getCanonicalForm())
+            self.Ps[s], v = self.nnet.predict(game.boxes)
 
             # Improve Performance
-            valids = game.getLegalKeys()
+            # valids = game.getLegalKeys()
 
             # masking invalid moves
-            # self.Ps[s] = self.Ps[s]*valids
-            temp = np.zeros(game.getActionSize())
-            for v in valids:
-                temp[v] = self.Ps[s][v]
-            self.Ps[s] = temp
+            valids = game.getValidMoves()
+            self.Ps[s] = self.Ps[s]*valids
+            # temp = np.zeros(game.getActionSize())
+            # for v in valids:
+            #     temp[v] = self.Ps[s][v]
+            # self.Ps[s] = temp
 
             sum_Ps_s = np.sum(self.Ps[s])
             if sum_Ps_s > 0:
@@ -113,15 +124,22 @@ class MCTS():
             self.Ns[s] = 0
             return -v
 
+
         valids = self.Vs[s]
+        # valids = game.getLegalKeys()
+
+        # if len(valids)!=len(game.getLegalKeys()):
+        #     print("Valids Diff: ")
+        #     print(valids)
+        #     print(game.getLegalKeys())
         cur_best = -float('inf')
         best_act = -1
 
         # pick the action with the highest upper confidence bound
-        # for a in range(game.getActionSize()):
-        #     if valids[a]:
+        for a in range(game.getActionSize()):
+            if valids[a]:
         # print(len(valids),flush=True)
-        for a in valids:
+        # for a in valids:
                 if (s,a) in self.Qsa:
                     u = self.Qsa[(s,a)] + self.args.cpuct*self.Ps[s][a]*math.sqrt(self.Ns[s])/(1+self.Nsa[(s,a)])
                 else:
