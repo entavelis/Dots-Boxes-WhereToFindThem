@@ -1,4 +1,6 @@
 # Colorful Traceback
+import argparse
+
 try:
     import colored_traceback.auto
 except ImportError:
@@ -15,69 +17,82 @@ except Exception:
     from dotsandboxes.pytorch.NNet import NNetWrapper as nn
     from utils import *
 
+import numpy as np
 
-args = dotdict({
-    'numIters': 100, # Changed from 1000
-    'numEps': 50, # Changed from 100
-    'tempThreshold': 15,
-    'updateThreshold': 0.55, # Changed from 0.6
-    'maxlenOfQueue': 200000,
-    'numMCTSSims': 25, # Changed from 25
-    'arenaCompare': 41, # Changed from 40
-    'cpuct': 1,
+parser = argparse.ArgumentParser()
 
-    'checkpoint': './models/',
-    'load_model': False,
-    'load_folder_file': ('/dev/models/8x100x50','best.pth.tar'),
-    'numItersForTrainExamplesHistory': 20,
+parser.add_argument('--numIters',type= int, default=1000)
+parser.add_argument('--numEps',type= int, default=101)
+parser.add_argument('--tempThreshold',type= int, default=20)
+parser.add_argument('--updateThreshold',type= float, default=0.55)
+parser.add_argument('--maxlenOfQueue',type= int, default=200000)
+parser.add_argument('--numMCTSSims',type= int, default=25)
+parser.add_argument('--arenaCompare',type= int, default=40)
+parser.add_argument('--cpuct',type= int, default=1)
+parser.add_argument('--checkpoint',type= str, default='./models/')
+parser.add_argument('--load_model',type= str, default="false")
+parser.add_argument('--load_folder',type= str, default='./models/')
+parser.add_argument('--load_file',type= str, default='best.pth.tar')
+parser.add_argument('--numItersForTrainExamplesHistory',type= int, default=  20)
+parser.add_argument('--max_board',type= int, default=10)
+parser.add_argument('--time_limit',type= float, default=0)
+parser.add_argument('--rows',type= int, default=3)
+parser.add_argument('--columns',type=int, default=3)
+parser.add_argument('--arena',type=str, default= "true")
+parser.add_argument('--arch',type=str, default="DnBNet")
+parser.add_argument('--blocks',type=int, default= 5)
 
-    # OUR PARAMETERS
-    'sequential_training': True, #Starting from smaller boards and going upwards,
-    'max_board': 10,
-    'time_limit': 0, # Zero means no time limit
-    'rows': 4,
-    'columns': 4
-})
+def main():
+    # args.rows = np.random.randint(2,6)
+    # args.columns = np.random.rand]int(2,args.rows)
+    args = parser.parse_args()
 
-if __name__=="__main__":
-
-    g = Game(args.rows,args.columns)
-    nnet = nn(g)
-
-    args.checkpoint += "dim" + str(args.rows) + 'x' + str(args.columns) + "/"
 
     print("Rows: " + str(args.rows))
     print("Columns: " + str(args.columns))
 
+    g = Game(args.rows,args.columns)
+    nnet = nn(g,args)
 
-    if args.load_model:
-        nnet.load_checkpoint(args.load_folder_file[0], args.load_folder_file[1])
+
+
+    args.checkpoint += "dim" + str(args.rows) + 'x' + str(args.columns) + "/"
+    args.load_folder += "dim" + str(args.rows) + 'x' + str(args.columns) + "/"
+
+
+    if args.load_model == "true":
+        nnet.load_checkpoint(args.load_folder, args.load_file)
 
     c = Coach(g, nnet, args)
-    if args.load_model:
+    if args.load_model == "true":
         print("Load trainExamples from file")
         c.loadTrainExamples()
     c.learn()
 
-    # flag=False # Initial load
-    #
-    #
-    # # Change so we train in a seq manner
-    # for n in range(2,args.max_board+1):
-    #     for m in range(2,i+1):
-    #         print("Training on boards " + n + "x" + m + "...\n\n")
-    #         g = Game(n,m, args.max_board)
-    #         nnet = nn(g)
-    #
-    #         args.numEps= n*m
-    #
-    #         if args.load_model:
-    #           nnet.load_checkpoint(args.load_folder_file[0], args.load_folder_file[1])
-    #
-    #         c = Coach(g, nnet, args)
-    #         if flag or args.load_model:
-    #             print("Load trainExamples from file")
-    #             c.loadTrainExamples()
-    #         c.learn()
-    #
-    #         flag=True # From now on we read the prev level
+if __name__=="__main__":
+    main()
+#
+# args = dotdict({
+#     'numiters': 50, # changed from 1000
+#     'numeps': 20, # changed from 100
+#     'tempthreshold': 50, # changed from 15
+#     'updatethreshold': 0.50, # changed from 0.6
+#     'maxlenofqueue': 200000,
+#     'nummctssims': 15, # changed from 25
+#     'arenacompare': 21, # changed from 40
+#     'cpuct': 1,
+#
+#     'checkpoint': './models/',
+#     'load_model': false,
+#     'load_folder_file': ('/dev/models/8x100x50','best.pth.tar'),
+#     'numitersfortrainexampleshistory': 20,
+#
+#     # our parameters
+#     'sequential_training': true, #starting from smaller boards and going upwards,
+#     'max_board': 10,
+#     'time_limit': 0, # zero means no time limit
+#     'rows': 3,
+#     'columns': 3,
+#     'arena': true
+# })
+

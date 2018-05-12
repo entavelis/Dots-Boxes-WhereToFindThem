@@ -10,10 +10,9 @@ class MCTS():
     This class handles the MCTS tree.
     """
 
-    # def __init__(self, game, nnet, args):
-    def __init__(self, nnet, args):
+    # def __init__(self, game, args):
+    def __init__(self, args):
         # self.game = game
-        self.nnet = nnet
         self.args = args
         self.Qsa = {}       # stores Q values for s,a (as defined in the paper)
         self.Nsa = {}       # stores #times edge s,a was visited
@@ -44,18 +43,18 @@ class MCTS():
             while timeleft>tmptime:
                 tmptime = time.time();
                 game_instance = copy.deepcopy(game)
-
+                self.depth=0
                 self.search(game_instance, currPlayer)
 
                 tmptime = time.time() - tmptime;
                 timeleft -= tmptime
-                self.depth=0
+
         else:
             for i in range(no_sims):
                 # print("NEW SIMULATION STARTED",flush=True)
                 # print(i,flush=True)
                 game_instance = copy.deepcopy(game)
-                self.depth=0
+                # self.depth=0
                 # self.moves=[]
                 self.search(game_instance, 1)
                 # print(self.moves)
@@ -117,7 +116,8 @@ class MCTS():
 
         if s not in self.Ps:
             # leaf node
-            self.Ps[s], v = self.nnet.predict(game.boxes)
+
+            v = (np.random.rand()-1)/5
 
             # Improve Performance
 
@@ -129,8 +129,8 @@ class MCTS():
             temp = {}
             sum_Ps_s = 0
             for a in valids:
-                temp[a] = self.Ps[s][a]
-                sum_Ps_s += self.Ps[s][a]
+                temp[a] = 1
+                sum_Ps_s += 1
             self.Ps[s] = temp
 
             # sum_Ps_s = np.sum(self.Ps[s])
@@ -175,9 +175,6 @@ class MCTS():
 
         # if the next player is the same then the value is positive
         v = self.search(game, next_player)*sign
-        # self.depth -= 1
-        # print("Depth: {} \t Current Player: {} \t Next Player: {} \t Value: {} \t Score {}".format(self.depth, player, next_player, v, game.score))
-
         #
         # print("\n")
         # print("Depth: " + str(self.depth))

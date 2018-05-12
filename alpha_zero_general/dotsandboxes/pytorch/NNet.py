@@ -24,7 +24,8 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.autograd import Variable
 
-from .DnBNNet import DnBNNet as onnet
+from .DnBResNet import ResNet as resnet
+from .DnBNNet import DnBNNet as dnbnet
 
 args = dotdict({
     'lr': 0.001,
@@ -33,11 +34,25 @@ args = dotdict({
     'batch_size': 64,
     'cuda': torch.cuda.is_available(),
     'num_channels': 512,
+    'arch': 'DnBNet',
+    'blocks': 10
 })
 
 class NNetWrapper(NeuralNet):
-    def __init__(self, game):
-        self.nnet = onnet(game, args)
+
+    def __init__(self, game, global_args = None):
+        if global_args != None:
+            args.arch = global_args.arch
+            args.blocks = global_args.blocks
+
+        if args.arch == 'ResNet':
+            print("Initializing ResNet architecture")
+            self.nnet = resnet(game, args)
+        else:
+            print("Initializing DnBNet architecture")
+            self.nnet = dnbnet(game, args)
+            print("Done")
+
         self.board_x, self.board_y = game.getBoardSize()
         self.action_size = game.getActionSize()
 
@@ -129,7 +144,7 @@ class NNetWrapper(NeuralNet):
         self.nnet.eval()
         pi, v = self.nnet(board)
 
-        #print('PREDICTION TIME TAKEN : {0:03f}'.format(time.time()-start))
+        # print('PREDICTION TIME TAKEN : {0:03f}'.format(time.time()-start))
         return torch.exp(pi).data.cpu().numpy()[0], v.data.cpu().numpy()[0]
 
     def loss_pi(self, targets, outputs):
@@ -145,6 +160,7 @@ class NNetWrapper(NeuralNet):
             os.mkdir(folder)
         else:
             print("Checkpoint Directory exists! ")
+        print("Saving to " + str(filepath))
         torch.save({
             'state_dict' : self.nnet.state_dict(),
         }, filepath)
@@ -152,7 +168,7 @@ class NNetWrapper(NeuralNet):
     def load_checkpoint(self, folder='checkpoint', filename='checkpoint.pth.tar', cpu='False'):
         # https://github.com/pytorch/examples/blob/master/imagenet/main.py#L98
         filepath = os.path.join(folder, filename)
-        print("Saving in " + str(filepath))
+        print("Loading from " + str(filepath))
         if not os.path.exists(filepath):
             raise("No model in path {}".format(filepath))
         if cpu:

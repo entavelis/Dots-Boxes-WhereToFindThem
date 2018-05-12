@@ -17,27 +17,10 @@ import json
 
 import numpy as np
 
-from alpha_zero_general import MCTS
-from alpha_zero_general import MCTSplain
 from alpha_zero_general.dotsandboxes.DnBGame import DnBGame
-from alpha_zero_general.utils import dotdict
-from alpha_zero_general.dotsandboxes.pytorch.NNet import NNetWrapper as nn
 
 from collections import defaultdict
 import random
-#
-# import numpy as np
-# try:
-#     from alpha_zero_general.MCTS import MCTS
-#     from alpha_zero_general.dotsandboxes.NNet import NNetWrapper as NNet
-#     from alpha_zero_general.dotsandboxes.DnBGame import DnBGame
-#     from alpha_zero_general.utils import *
-# except Exception:
-#     from .alpha_zero_general.dotsandboxes.DnBGame import DnBGame
-#     from .alpha_zero_general.MCTS import MCTS
-#     from .alpha_zero_general.dotsandboxes.NNet import NNetWrapper as NNet
-#     from .alpha_zero_general.utils import *
-
 
 
 logger = logging.getLogger(__name__)
@@ -75,8 +58,15 @@ class DotsAndBoxesAgent:
         self.nb_rows = nb_rows
         self.nb_cols = nb_cols
 
+        rows = []
+        # for ri in range(nb_rows + 1):
+        #     columns = []
+        #     for ci in range(nb_cols + 1):
+        #         columns.append({"v": 0, "h": 0})
+        #     rows.append(columns)
+        # self.cells = rows
+
         logger.info("Initializing the agent")
-        logger.info("Timelimit: %f" % (timelimit))
         # Initialize the Game
         self.swapped = nb_rows < nb_cols
         if self.swapped:
@@ -84,25 +74,7 @@ class DotsAndBoxesAgent:
         else:
             self.game = DnBGame(nb_rows, nb_cols)
         self.game.reset_game()
-        # print([self.game.legalMoves[x] for x in self.game.legalMoves])
 
-        mcts_args = dotdict({'numMCTSSims': 30, 'cpuct':1.0, 'time_limit': timelimit}) #Impose Timelimit here?
-        try:
-        # Initialize the Network
-            self.nn = nn(self.game)
-            modelpath = "./alpha_zero_general/models/dim" + str(max(nb_rows,nb_cols)) + \
-                                    "x" + str(min(nb_rows,nb_cols)) + str("/")
-            print("Searching for path " + str(modelpath))
-            self.nn.load_checkpoint(modelpath, "best.pth.tar")
-
-        # Initialize the MCTS and first its arguments
-            self.mcts = MCTS.MCTS(self.nn, mcts_args)
-
-            self.plain=False
-        except Exception:
-            print("Something went wrong, using plain MCTS agent instead")
-            self.mcts = MCTSplain.MCTS(mcts_args)
-            self.plain=True
 
 
 
@@ -161,16 +133,39 @@ class DotsAndBoxesAgent:
         #         .format(self.nb_rows, self.nb_cols, self.player))
 
 
-        probs = self.mcts.getActionProb(self.game, 1, temp=1)
-        action = np.argmax(probs)
+        is3 = self.game.boxes==3
 
+        has_down = list(np.argwhere(is3 and np.roll(is3,-1,0)))
+        has_left = list(np.argwhere(is3 and np.roll(is3,-1,1)))
+        is3 = list(np.argwhere(is3))
+
+        if has_down:
+            r,c = np.random.choice(has_down)
+            o = 1
+        elif has_left:
+            r,c = np.random.choice(has_left)
+            o = 0
+        elif is3:
+            r,c = np.random.choice(is3)
+            if self.boxes[r-1,c] < 3:
+                r-=1
+                o=0
+            elif self.boxes[r,c-1] < 4:
+                c-=1
+                o=1
+            elif self.boxes[r+1,c] < 4:
+                o=0
+            else:
+                o=1
+        else:
+
+            action = self.game.legalMoves[np.random.choice(list(self.game.getLegalKeys()))]
+            o = action % 2
+            r = int(action/(2*self.game.n))
+            c = int(action/2) % self.game.n
 
         # self.game.getNextState(action,player)
         # self.game.getNextState(1,action)
-
-        o = action % 2
-        r = int(action/(2*self.game.n))
-        c = int(action/2) % self.game.n
 
         # print(self.game.legalMoves[action])
 

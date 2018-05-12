@@ -21,7 +21,6 @@ from alpha_zero_general import MCTS
 from alpha_zero_general import MCTSplain
 from alpha_zero_general.dotsandboxes.DnBGame import DnBGame
 from alpha_zero_general.utils import dotdict
-from alpha_zero_general.dotsandboxes.pytorch.NNet import NNetWrapper as nn
 
 from collections import defaultdict
 import random
@@ -75,8 +74,15 @@ class DotsAndBoxesAgent:
         self.nb_rows = nb_rows
         self.nb_cols = nb_cols
 
+        rows = []
+        # for ri in range(nb_rows + 1):
+        #     columns = []
+        #     for ci in range(nb_cols + 1):
+        #         columns.append({"v": 0, "h": 0})
+        #     rows.append(columns)
+        # self.cells = rows
+
         logger.info("Initializing the agent")
-        logger.info("Timelimit: %f" % (timelimit))
         # Initialize the Game
         self.swapped = nb_rows < nb_cols
         if self.swapped:
@@ -87,22 +93,7 @@ class DotsAndBoxesAgent:
         # print([self.game.legalMoves[x] for x in self.game.legalMoves])
 
         mcts_args = dotdict({'numMCTSSims': 30, 'cpuct':1.0, 'time_limit': timelimit}) #Impose Timelimit here?
-        try:
-        # Initialize the Network
-            self.nn = nn(self.game)
-            modelpath = "./alpha_zero_general/models/dim" + str(max(nb_rows,nb_cols)) + \
-                                    "x" + str(min(nb_rows,nb_cols)) + str("/")
-            print("Searching for path " + str(modelpath))
-            self.nn.load_checkpoint(modelpath, "best.pth.tar")
-
-        # Initialize the MCTS and first its arguments
-            self.mcts = MCTS.MCTS(self.nn, mcts_args)
-
-            self.plain=False
-        except Exception:
-            print("Something went wrong, using plain MCTS agent instead")
-            self.mcts = MCTSplain.MCTS(mcts_args)
-            self.plain=True
+        self.mcts = MCTSplain.MCTS(mcts_args)
 
 
 

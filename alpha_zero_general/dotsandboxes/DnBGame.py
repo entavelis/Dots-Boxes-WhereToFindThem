@@ -20,6 +20,8 @@ class DnBGame():
 
 
 
+
+
     def reset_game(self):
         # Reset Score to 0
         self.score = 0
@@ -33,35 +35,37 @@ class DnBGame():
         # self.mask = [None]*self.n
 
         for i in range(self.n):
-            self.boxes[i] = [0]*self.m
-            # self.mask[i] = [0]*self.m
+            self.boxes[i] = [-5]*self.m
+            # self.boxes[i] = [0]*self.m
 
         # ATTENTION: Do I even need to store the tuple or just the hash? Check Implementation as Java's BitSet or just have the
         self.legalMoves = dict()
-
-        # Set up the legalMoves.
-        # Centers the Inner Dimensions in the center and pads
-        # for i in range((self.n - self.innerN)/2,(self.n + self.innerN)/2):
-        for i in range(1,self.n-1):
-        #     for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
-            for j in range(1,self.m-1):
-                # self.mask[i][j] = 1
-                # Horizontal (left) Move -> 0
-                self.add_legal_move(i,j-1,0)
-
-                # Vertical (down) Move -> 1
-                self.add_legal_move(i-1,j,1)
-
-
-            # Last Horizontal
-            # self.add_legal_move(i,(self.m - self.innerM)/2,0)
-            self.add_legal_move(i,self.m - 2,0)
 
         # Last Verticals
         # for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
         for j in range(1,self.m-1):
             # self.add_legal_move((self.n + self.innerN)/2,j,1)
-            self.add_legal_move(self.n-2,j,1)
+            self.add_legal_move(0,j,1)
+
+        # Set up the legalMoves.
+        # Centers the Inner Dimensions in the center and pads
+        # for i in range((self.n - self.innerN)/2,(self.n + self.innerN)/2):
+        for i in range(1,self.n-1):
+            # self.add_legal_move(i,(self.m - self.innerM)/2,0)
+            self.add_legal_move(i,0,0)
+
+        #     for j in range((self.n - self.innerM)/2,(self.m - self.innerM)/2):
+            for j in range(1,self.m-1):
+                # self.mask[i][j] = 1
+                self.boxes[i][j]=0
+                # Horizontal (left) Move -> 0
+                self.add_legal_move(i,j,0)
+
+                # Vertical (down) Move -> 1
+                self.add_legal_move(i,j,1)
+
+
+            # Last Horizontal
 
         # TOCHECK turn to np.arrays
         self.boxes = np.array(self.boxes)
@@ -78,15 +82,8 @@ class DnBGame():
         # self.legalMoves[(self.innerN*x+y)*2 + d] = (x,y,d)
         self.legalMoves[(self.m*x+y)*2 + d] = (x,y,d)
 
-    def pop_legal_move(self, moveno):
-        return self.legalMoves.pop(moveno, None)
-        move = self.legalMoves(moveno)
-        x = move[0]
-        y = move[1]
-        d = move[2]
-
-        return self.legalMoves.pop((self.innerN*x+y)*2 + d, None)
-
+    def numberLegalMoves(self):
+        return len(self.legalMoves)
 
     def getLegalMoves(self):
         return self.legalMoves
@@ -114,14 +111,20 @@ class DnBGame():
 
         # Change board state
         self.boxes[move[0]][move[1]]+=1
+        # self.boxes[move[0]][move[1]]+=0.25
         plays_again += self.boxes[move[0]][move[1]] == 4
+        # plays_again += int(self.boxes[move[0]][move[1]])
 
         if move[2]:
             self.boxes[move[0]+1][move[1]] += 1
+            # self.boxes[move[0]+1][move[1]] += 0.25
             plays_again += self.boxes[move[0]+1][move[1]] == 4
+            # plays_again += int(self.boxes[move[0]+1][move[1]])
         else:
             self.boxes[move[0]][move[1]+1] += 1
+            # self.boxes[move[0]][move[1]+1] += 0.25
             plays_again += self.boxes[move[0]][move[1]+1] == 4
+            # plays_again += int(self.boxes[move[0]][move[1]+1])
 
 
 
@@ -151,7 +154,14 @@ class DnBGame():
 
         # Gets and removes the action out of the legal moves
 
-        move = self.pop_legal_move(action)
+        tlen = len(self.legalMoves)
+
+        assert self.hasLegalMoves(), "Doesn't have legal moves"
+        assert self.isValidMove(action), "Isn't a valid move"
+        move = self.legalMoves.pop(action)
+
+        assert (tlen == len(self.legalMoves)+1), "No Move was deleted"
+
 
         self.moves_played.append(action)
         if move==None:
@@ -164,7 +174,7 @@ class DnBGame():
             print("\nBoard State\n")
             print(self.boxes)
             self.printLegalMoves()
-            # raise ValueError
+            assert (move!=None), "Move was None"
 
 
         # checks if the box is filled
@@ -193,7 +203,7 @@ class DnBGame():
             # draw has a very little value
             return 1e-4
 
-        return np.sign(self.score)
+        return np.sign(self.score)*1.
 
 
     # Maybe we should set this to turn boards so n>m
@@ -265,7 +275,8 @@ class DnBGame():
 
     def stringRepresentation(self):
         # 8x8 numpy array (canonical board)
-        return self.boxes.tostring()
+        # return self.boxes.tostring()
+        return str(self.legalMoves.keys())
 
     def printLegalMoves(self):
 

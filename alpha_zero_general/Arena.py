@@ -46,22 +46,19 @@ class Arena():
         while self.game.getGameEnded()==0:
             it+=1
             if verbose:
-                assert(self.display)
+                # assert(self.display)
                 print("Turn ", str(it), "Player ", str(curPlayer))
-                self.display(self.game.getCanonicalForm)
+                self.display(self.game.boxes)
 
             # CHECK: change this to adjust nnet input?
             # +1 is to get -1 to 0 and 1 to 2 for indices
-            action = players[curPlayer+1](self.game)
+            probs = players[curPlayer+1](self.game, curPlayer)
+            # print(probs)
+            action = np.argmax(probs)
 
             # valids = self.game.getValidMoves()
 
-            # if valids[action]==0:
-            if not self.game.isValidMove(action):
-                print(action)
-                print(self.game.printLegalMoves())
-                assert(self.game.isValidMove(action),str(action) + " not in " + str(self.game.getLegalMoves()))
-                # assert valids[action] >0
+            assert self.game.isValidMove(action),(str(action) + " not in " + str(self.game.getLegalMoves()))
 
             curPlayer = self.game.getNextState(curPlayer, action)
 
